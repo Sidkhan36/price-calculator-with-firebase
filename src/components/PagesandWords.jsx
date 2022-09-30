@@ -20,6 +20,8 @@ const PagesandWords = () => {
     <div className='d-flex'>
       {!disabled && <button className='btn fw-bold ' onClick={()=> dispatch({type:'DECREMENT'})}>-</button>}
       <select name='pages' className='form-select'>
+    <option>{state.page} page / {state.words} words</option>
+
         {pageandwords.map(page => <option key={page}>{page}</option>)}
       </select>
       <button className='btn btn-secondary fw-bold' onClick={()=> dispatch({type:'INCREMENT'})}>+</button>
