@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+.form{
+    margin: 40px;
+    padding: 10px;
+    /* background-color: gainsboro; */
+    /* height: 450px; */
+    width: 330px;
+    box-shadow: 0 2.47px 4.99px 0 gainsboro;
+}
+.form:hover{
+    box-shadow: 0 3.47px 5.99px 0 gainsboro;
+}
+h4{
+    text-align: end;
+    margin-right: 20px;
+    line-height: 40px;
+}
