@@ -1,96 +1,33 @@
-import {
-  Button,
-  FormControl,
-  MenuItem,
-  OutlinedInput,
-  Select,
-} from "@mui/material";
-import React from "react";
-import { useTheme } from "@mui/material/styles";
-import { flexbox } from "@mui/system";
-
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
-
-const names = [
-  "1 Page / 275 words",
-  "2 Page / 550 words",
-  "3 Page / 825 words",
-  "4 Page / 1100 words",
-  "5 Page / 1375 words",
-  "6 Page / 1650 words",
-  "7 Page / 1925 words",
-  "8 Page / 2200 words",
-  "9 Page / 2475 words",
-];
-
-function getStyles(name, personName, theme) {
-  return {
-    fontWeight:
-      personName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
-  };
-}
+import React, { useContext } from 'react'
+import CreateContext from '../CreateContext'
+import DispatchContext from '../DispatchContext'
 const PagesandWords = () => {
-  const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
-
-  const handleChange = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setPersonName(
-      // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
-    );
-  };
+  const dispatch = useContext(DispatchContext)
+  const state = useContext(CreateContext)
+  const disabled = state.page <=1 && state.words <=275?'disabled':''
+  const pageandwords =[
+    "1 Page / 275 words",
+        "2 Page / 550 words",
+        "3 Page / 825 words",
+        "4 Page / 1100 words",
+        "5 Page / 1375 words",
+        "6 Page / 1650 words",
+        "7 Page / 1925 words",
+        "8 Page / 2200 words",
+        "9 Page / 2475 words",
+  ]
   return (
-    <div style={{ display: "flex" }}>
-      <Button variant="outlined" size="small">-</Button>
-      <FormControl sx={{ m: 1, width: 300, mt: 3 }}>
-        <Select
-          size="small"
-          multiple
-          displayEmpty
-          value={personName}
-          onChange={handleChange}
-          input={<OutlinedInput />}
-          renderValue={(selected) => {
-            if (selected.length === 0) {
-              return <em>Placeholder</em>;
-            }
-
-            return selected.join(", ");
-          }}
-          MenuProps={MenuProps}
-          inputProps={{ "aria-label": "Without label" }}
-        >
-          <MenuItem disabled value="">
-            <em>Placeholder</em>
-          </MenuItem>
-          {names.map((name) => (
-            <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, personName, theme)}
-            >
-              {name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-      <Button variant="outlined" size="small">+</Button>
+    <div className='d-flex'>
+      {!disabled && <button className='btn fw-bold ' onClick={()=> dispatch({type:'DECREMENT'})}>-</button>}
+      <select name='pages' className='form-select'>
+        {pageandwords.map(page => <option key={page}>{page}</option>)}
+      </select>
+      <button className='btn btn-secondary fw-bold' onClick={()=> dispatch({type:'INCREMENT'})}>+</button>
     </div>
-  );
-};
+  )
+}
 
-export default PagesandWords;
+export default PagesandWords
+{/* <option className='style'>1 Page / 275 words</option>
+<option className='style'>2 Page / 550 words</option>
+<option className='style'>3 Page / 825 words</option>  */}

@@ -1,15 +1,11 @@
-import { Box, Button, ButtonBase, ButtonGroup, Tab } from '@mui/material'
-import React from 'react'
-
+import React, { useContext } from 'react'
+import CreateContext from '../CreateContext'
 const Tabs = () => {
-    
+  const state = useContext(CreateContext)    
+  console.log(state.tabs)
   return (
-    <div>
-        <ButtonGroup sx={{backgroundColor:'gainsboro'}}>
-           <Button variant='outlined'>Writing</Button>
-           <Button variant='outlined'>Re-Writing</Button>
-           <Button variant='outlined'>Editing</Button>
-        </ButtonGroup>
+    <div className='btn btn-secondary'>
+      {state.tabs.map(tab => <button key={tab.tab} className='btn btn-secondary '>{tab.tab}</button>)}
     </div>
   )
 }
