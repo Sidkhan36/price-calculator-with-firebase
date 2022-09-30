@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Tabs from './Tabs'
 import Select from './Select'
 import './form.css'
 import CatandTime from './CatandTime'
 import PagesandWords from './PagesandWords'
 import { Button, FormControlLabel, Radio, RadioGroup } from '@mui/material'
+import OurContext from '../OurContext'
 const Form = () => {
+  const state = useContext(OurContext)
   function submitHandler(e){
     e.preventDefault()
   }
@@ -38,7 +40,7 @@ const Form = () => {
   </label>
       </div>
 
-        <h4>$ 6.3</h4>
+        <h4>${state.price}</h4>
         <div className="d-grid gap-2">
       <button className="btn btn-primary" type="button">Write My Paper</button>
 </div>
