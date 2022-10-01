@@ -9,9 +9,9 @@ import data from './data'
 
 function App() {
   const [state, dispatch] = useReducer(dispatcher, initialState)
-  const [gdata, setData] = useState(data)
+  // const [gdata, setData] = useState(data)
   useEffect(() => {
-    console.log(gdata)
+    // console.log(gdata)
     
   }, [])
   

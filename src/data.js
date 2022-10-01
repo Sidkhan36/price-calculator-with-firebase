@@ -83,7 +83,7 @@ let data = [
   {
     _id: 2,
     gigName: "ReWriting",
-    startingPrice: 4.3,
+    startingPrice: 3.3,
     pages: 1,
     words: 275,
     singleSpaces: 550,
@@ -164,7 +164,7 @@ let data = [
   {
     _id: 3,
     gigName: "Editing",
-    startingPrice: 4.3,
+    startingPrice: 2.3,
     pages: 1,
     words: 275,
     singleSpaces: 550,

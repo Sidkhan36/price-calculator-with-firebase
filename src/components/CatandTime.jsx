@@ -1,28 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import OurContext from '../OurContext'
 
 const CatandTime = () => {
-  const names=[
-  'School',
-  'College',
-  'University',
-  'Maters',
-  'Doctorate']
-
-  const time=[
-  '6 Hours',
-  '12 Hours',
-  '1 Day',
-  '2 Day',
-  '3 Day']
-
+  const state = useContext(OurContext)
+  const timePeriod = state.gigs[0].timePeriod
+  const almaMater = state.gigs[0].almaMater
 
   return (
     <div className='categandtime d-flex my-2'>
       <select className='form-select  mx-1'>
-        {names.map(name => <option onClick={()=> console.log(name)} key={name}>{name}</option>)}
+        {almaMater.map(worklevel => <option>{worklevel.level}</option>)}
+        {/* {names.map(name => <option onClick={()=> console.log(name)} key={name}>{name}</option>)} */}
       </select>
       <select className='form-select  mx-1'>
-        {time.map(time => <option onClick={()=> console.log(time)}key={time}>{time}</option>)}
+        {timePeriod.map(period => <option>{period.duration}</option>)}
+        {/* {time.map(time => <option onClick={()=> console.log(time)}key={time}>{time}</option>)} */}
       </select>
     </div>
   )
