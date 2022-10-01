@@ -20,7 +20,7 @@ const PagesandWords = () => {
     <div className="d-flex">
       {!disabled && (
         <button
-          className="btn fw-bold "
+          className="btn btn-secondary fw-bold "
           onClick={() => dispatch({ type: "DECREMENT" })}
         >
           -
@@ -32,7 +32,7 @@ const PagesandWords = () => {
         </option>
 
         {pageandwords.map((page) => (
-          <option key={page}>{page}</option>
+          <option onClick={()=> console.log(page)} key={page}>{page}</option>
         ))}
       </select>
       <button

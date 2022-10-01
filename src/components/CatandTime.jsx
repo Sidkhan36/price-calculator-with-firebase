@@ -19,10 +19,10 @@ const CatandTime = () => {
   return (
     <div className='categandtime d-flex my-2'>
       <select className='form-select  mx-1'>
-        {names.map(name => <option key={name}>{name}</option>)}
+        {names.map(name => <option onClick={()=> console.log(name)} key={name}>{name}</option>)}
       </select>
       <select className='form-select  mx-1'>
-        {time.map(time => <option key={time}>{time}</option>)}
+        {time.map(time => <option onClick={()=> console.log(time)}key={time}>{time}</option>)}
       </select>
     </div>
   )

@@ -1,16 +1,20 @@
 import './App.css';
-import { Button } from '@mui/material';
 import Form from './components/Form';
-import { useReducer } from 'react';
-import data from './components/data';
+import { useEffect, useReducer, useState } from 'react';
 import OurContext from './OurContext';
 import DispatchContext from './DispatchContext';
 import { initialState, dispatcher } from './reducer';
+import data from './data'
 
 
 function App() {
   const [state, dispatch] = useReducer(dispatcher, initialState)
-  console.log(state)
+  const [gdata, setData] = useState(data)
+  useEffect(() => {
+    console.log(gdata)
+    
+  }, [])
+  
   return (
     <DispatchContext.Provider value={dispatch}>
     <OurContext.Provider value={state}>

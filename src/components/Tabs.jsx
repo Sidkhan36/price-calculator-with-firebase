@@ -5,7 +5,7 @@ const Tabs = () => {
   // console.log(state.tabs)
   return (
     <div className='btn btn-secondary'>
-      {state.gigs.map(gig => <button key={gig._id} className='btn btn-secondary '>{gig.gigName}</button>)}
+      {state.gigs.map(gig => <a href='#' key={gig._id} onClick={()=> console.log(gig._id, gig.gigName, gig.gigPrice)} className='btn btn-secondary '>{gig.gigName}</a>)}
     </div>
   )
 }

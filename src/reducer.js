@@ -1,8 +1,8 @@
 export const initialState = {
   gigs: [
-    { _Id:1, gigName: "Writing", gigPrice: 11.2 },
-    { _Id:1, gigName: "ReWriting", gigPrice: 7.2 },
-    { _Id:1, gigName: "Editing", gigPrice: 6.78 },
+    { _id:1, gigName: "Writing", gigPrice: 11.2 },
+    { _id:2, gigName: "ReWriting", gigPrice: 7.8 },
+    { _id:3, gigName: "Editing", gigPrice: 5.78 },
   ],
   gigsType: [
     {
@@ -52,7 +52,7 @@ export const initialState = {
   ],
   page: 1,
   words: 275,
-  price: 11.2,
+  totalGigPrice:'',
 };
 
 export function dispatcher(state, action) {
