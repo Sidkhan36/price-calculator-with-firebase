@@ -26,14 +26,8 @@ const PagesandWords = () => {
           -
         </button>
       )}
+       {}
       <select name="pages" className="form-select">
-        <option>
-          {state.page} page / {state.words} words
-        </option>
-
-        {pageandwords.map((page) => (
-          <option onClick={()=> console.log(page)} key={page}>{page}</option>
-        ))}
       </select>
       <button
         className="btn btn-secondary fw-bold"

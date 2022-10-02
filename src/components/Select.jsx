@@ -1,17 +1,25 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
+import DispatchContext from '../DispatchContext'
 import OurContext from '../OurContext'
 
 const Select = () => {
-  const state = useContext(OurContext)
-  const gigTypeName = state.gigs[0].gigType
-  
+  const {data} = useContext(OurContext)
+  const dispatch = useContext(DispatchContext)
+  // const [select, setSelect]= useState('')
+  // console.log(state.select)
   // console.log(worktype)
+  console.log(data)
+  // function handlechange(e){
+  //   setSelect(e.target.value)
+  // }
+  
   return (
     <div className='my-2'>
-  <select className="form-select my-2'" >
-    {gigTypeName.map(gigtypename => <option onClick={()=> console.log(gigtypename.gigTypeName)}>{gigtypename.gigTypeName}</option>)}
-    {/* {gigTypeName.map(gigtype => <option onClick={()=> console.log(gigtype.gigTypeName)}key={gigtype.gigTypeName}>{gigtype.gigTypeName}</option>)} */}
-   
+  <select className="form-select my-2"
+          // value={select}
+          // onChange={handlechange}
+          name="select">
+            {data[0].gigType.map(gigtypename => <option onClick={()=> dispatch({type:'SELECT', value:true})}key={gigtypename.id}>{gigtypename.gigTypeName}</option>)}
   </select>
     </div>
   )
