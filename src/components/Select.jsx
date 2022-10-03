@@ -3,7 +3,7 @@ import DispatchContext from '../DispatchContext'
 import OurContext from '../OurContext'
 
 const Select = () => {
-  const {data} = useContext(OurContext)
+  const {data, state} = useContext(OurContext)
   const dispatch = useContext(DispatchContext)
   // const [select, setSelect]= useState('')
   // console.log(state.select)
@@ -19,7 +19,11 @@ const Select = () => {
           // value={select}
           // onChange={handlechange}
           name="select">
-            {data[0].gigType.map(gigtypename => <option onClick={()=> dispatch({type:'SELECT', value:true})}key={gigtypename.id}>{gigtypename.gigTypeName}</option>)}
+            {data[0].gigType.map(gigtypename => <option onClick={()=> dispatch(
+              {type:'SELECT',value:{id:gigtypename.id,
+                gigTypeName:gigtypename.gigTypeName,
+                                    gigTypePrice:gigtypename.gigTypePrice
+              }})}key={gigtypename.id}>{gigtypename.gigTypeName}</option>)}
   </select>
     </div>
   )

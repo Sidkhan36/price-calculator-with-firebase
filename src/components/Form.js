@@ -8,9 +8,10 @@ import OurContext from '../OurContext'
 const Form = () => {
   const {state }= useContext(OurContext)
   const totalPrice = state.startingPrice + state.gigWork.gigTypePrice + state.almaMater.levelPrice + state.time.durationPrice
-  console.log(state.gigWork)
+  // console.log(state.gigWork)
   function submitHandler(e){
     e.preventDefault()
+    console.log(state)
   }
   return (
     <div className='form'>
@@ -33,7 +34,7 @@ const Form = () => {
   </label>
       </div>
 
-        <h4>${totalPrice}</h4>
+        <h4>${state.page * totalPrice}</h4>
         <div className="d-grid gap-2">
       <button className="btn btn-primary" type="button">Write My Paper</button>
 </div>

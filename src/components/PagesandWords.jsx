@@ -3,8 +3,9 @@ import DispatchContext from "../DispatchContext";
 import OurContext from "../OurContext";
 const PagesandWords = () => {
   const dispatch = useContext(DispatchContext);
-  const state = useContext(OurContext);
+  const {state} = useContext(OurContext);
   const disabled = state.page <= 1 && state.words <= 275 ? "disabled" : "";
+  // const pages = state.page >1? 'Pages': 'Page'
   const pageandwords = [
     "1 Page / 275 words",
     "2 Page / 550 words",
@@ -26,8 +27,8 @@ const PagesandWords = () => {
           -
         </button>
       )}
-       {}
       <select name="pages" className="form-select">
+        <option>{`${state.page} ${state.page >1? 'Pages': 'Page'} / ${state.words} Words`}</option>
       </select>
       <button
         className="btn btn-secondary fw-bold"

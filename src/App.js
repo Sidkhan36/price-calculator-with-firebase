@@ -9,18 +9,10 @@ import data from './data'
 
 function App() {
   const [state, dispatch] = useReducer(dispatcher, initialState)
-  // const [gigWork, setGigWork]= useState({
-  //   gigType:{id:'',typeName:'',gigtypePrice:''},
-  //   page:1,
-  //   words:275,
-  //   time:'',
-  //   level:'',
-  //   totalPrice:'',
-  // })
-  console.log(state.gigWork)
-  function submitHandle(e){
-    e.preventDefault()
-  }
+ 
+  console.log(state)
+  // console.log(state.almaMater)
+  // console.log(state.time)
   // function handleChange(e){
   //   const {value, name, type, checked} = e.target
   //   setGigWork(prevgigwork => {
