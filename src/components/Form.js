@@ -7,7 +7,7 @@ import PagesandWords from './PagesandWords'
 import OurContext from '../OurContext'
 const Form = () => {
   const {state }= useContext(OurContext)
-  const totalPrice = state.startingPrice + state.gigWork.gigTypePrice + state.almaMater.levelPrice + state.time.durationPrice
+  const totalPrice = state.startingPrice + state.gigWork.gigTypePrice + state.almaMater.levelPrice + state.time.durationPrice;
   // console.log(state.gigWork)
   function submitHandler(e){
     e.preventDefault()

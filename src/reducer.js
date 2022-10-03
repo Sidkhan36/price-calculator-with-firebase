@@ -2,9 +2,9 @@ export const initialState = {
   words: 275,
   page: 1,
   startingPrice:4.3,
-  gigWork:{id:'',gigTypeName:'', gigTypePrice:'',},
-  time: { duration: '', durationPrice: '' },
-  almaMater: { level: '', levelPrice: '' },
+  gigWork:{id:'',gigTypeName:'', gigTypePrice:0,},
+  time: { duration: '', durationPrice: 0 },
+  almaMater: { level: '', levelPrice: 0 },
   totalPrice: 0
 };
 
