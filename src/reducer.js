@@ -6,6 +6,7 @@ export const initialState = {
   time: { duration: '', durationPrice: 0 },
   almaMater: { level: '', levelPrice: 0 },
   totalPrice: 0
+  // totalPrice: this.startingPrice + this.gigWork.gigTypePrice + this.time.durationPrice + this.almaMater.levelPrice
 };
 
 export function dispatcher(state, action) {

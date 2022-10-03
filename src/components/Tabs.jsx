@@ -4,7 +4,7 @@ const Tabs = () => {
   const {data} = useContext(OurContext)    
   // console.log(state.tabs)
   return (
-    <div className='btn btn-secondary'>
+    <div className='btn btn-secondary d-flex justify-content-around'>
       {data.map(tab => <a href='#' key={tab._id} className='btn btn-secondary'>{tab.gigName}</a>)}
     </div>
   )

@@ -21,17 +21,17 @@ const PagesandWords = () => {
     <div className="d-flex">
       {!disabled && (
         <button
-          className="btn btn-secondary fw-bold "
+          className="btn btn-secondary fw-bold rounded-0 rounded-start "
           onClick={() => dispatch({ type: "DECREMENT" })}
         >
           -
         </button>
       )}
-      <select name="pages" className="form-select">
+      <select name="pages" className="form-select rounded-0">
         <option>{`${state.page} ${state.page >1? 'Pages': 'Page'} / ${state.words} Words`}</option>
       </select>
       <button
-        className="btn btn-secondary fw-bold"
+        className="btn btn-secondary fw-bold rounded-0 rounded-end"
         onClick={() => dispatch({ type: "INCREMENT" })}
       >
         +

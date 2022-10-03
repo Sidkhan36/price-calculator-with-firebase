@@ -7,8 +7,8 @@ const CatandTime = () => {
   const dispatch = useContext(DispatchContext);
 
   return (
-    <div className="categandtime d-flex my-2">
-      <select className="form-select  mx-1">
+    <div className="categandtime d-flex justify-content-between my-2">
+      <select className="form-select me-1">
         {data[0].almaMater.map((level) => (
           <option
             onClick={() =>
@@ -23,7 +23,7 @@ const CatandTime = () => {
           </option>
         ))}
       </select>
-      <select className="form-select  mx-1">
+      <select className="form-select">
         {data[0].timePeriod.map((timetoTake) => (
           <option
             onClick={() =>

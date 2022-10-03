@@ -18,7 +18,7 @@ let data = [
       { level: "School", levelPrice: 0.7 },
       { level: "College", levelPrice: 0.7 },
       { level: "University", levelPrice: 0.7 },
-      { level: "Maters", levelPrice: 1.4 },
+      { level: "Master's", levelPrice: 1.4 },
       { level: "Doctorate", levelPrice: 1.4 },
     ],
     gigType: [
