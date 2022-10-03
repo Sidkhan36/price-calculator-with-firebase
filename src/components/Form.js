@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Tabs from "./Tabs";
 import Select from "./Select";
 import "./form.css";
+import fire from './fire.png'
 import CatandTime from "./CatandTime";
 import PagesandWords from "./PagesandWords";
 import OurContext from "../OurContext";
@@ -18,7 +19,7 @@ const Form = () => {
     e.preventDefault();
   }
   return (
-    <div className="form rounded-2 py-2" >
+    <div className="form rounded-2 p-3" >
       <h3 style={{ textAlign: "start", padding: "10px" }}>
         Calculate the Price
       </h3>
@@ -28,7 +29,7 @@ const Form = () => {
         <CatandTime />
         <PagesandWords />
 
-        <div className="d-flex justify-content-evenly my-2 ">
+        <div className="d-flex justify-content-between my-2 ">
           <input
             className="form-check-input"
             type="radio"
@@ -48,8 +49,10 @@ const Form = () => {
             Single space
           </label>
         </div>
+          <div className="d-flex justify-content-end align-items-center p-3">
 
-        <h4>${state.page * totalPrice}</h4>
+        <h5 className="m-0 fw-bold">$ {state.page * totalPrice}</h5><img src={fire} width='24px' height='24px'alt='burnImage'/>
+          </div>
         <div className="d-grid gap-2">
           <button className="btn btn-primary" type="button">
             Write My Paper
