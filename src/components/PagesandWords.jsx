@@ -4,7 +4,7 @@ import OurContext from "../OurContext";
 const PagesandWords = () => {
   const dispatch = useContext(DispatchContext);
   const {state} = useContext(OurContext);
-  const disabled = state.page <= 1 && state.words <= 275 ? "disabled" : "";
+  const disabled = state.page >= 1 && state.words <= 275 ? "disabled" : "";
   // const pages = state.page >1? 'Pages': 'Page'
   const pageandwords = [
     "1 Page / 275 words",

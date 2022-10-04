@@ -1,6 +1,8 @@
 export const initialState = {
   words: 275,
   page: 1,
+  singleSpace:false,
+  doubleSpace:true,
   startingPrice:4.3,
   gigWork:{id:'',gigTypeName:'', gigTypePrice:0,},
   time: { duration: '', durationPrice: 0 },
@@ -14,26 +16,34 @@ export function dispatcher(state, action) {
     case "INCREMENT":
       return {
         ...state,
-        page: state.page + 1,
-        words: state.words + 275,
+        page: state.page++,
+        words: state.words +275 ,
       };
     case "DECREMENT":
       return {
         ...state,
         words: state.words - 275,
-        page: state.page - 1,
+        page: state.page--,
       };
     case "SELECT":
       return {
-        ...state, gigWork: action.value 
-      };
-    case "LEVEL":
-      return {
-        ...state, almaMater: action.value 
+        ...state, gigWork: action.value,
+        };
+        case "LEVEL":
+          return {
+            ...state, almaMater: action.value ,
       };
     case "TIME":
       return {
         ...state, time: action.value 
+      };
+    case "DOUBLE-SPACE":
+      return {
+        ...state, doubleSpace:state.doubleSpace=true, singleSpace:state.singleSpace=false,words:state.words= 275 
+      };
+    case "SINGLE-SPACE":
+      return {
+        ...state, doubleSpace:state.doubleSpace=false, singleSpace:state.singleSpace=true, words:state.words=550  
       };
   }
 }

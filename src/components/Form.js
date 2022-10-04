@@ -6,9 +6,12 @@ import fire from './fire.png'
 import CatandTime from "./CatandTime";
 import PagesandWords from "./PagesandWords";
 import OurContext from "../OurContext";
+import DispatchContext from "../DispatchContext";
 const Form = () => {
   const { state } = useContext(OurContext);
+  const dispatch = useContext(DispatchContext)
   console.log(state.totalPrice)
+  console.log(state.singleSpace, state.doubleSpace)
   let totalPrice =state.totalPrice
     totalPrice =state.startingPrice +
     state.gigWork.gigTypePrice +
@@ -33,17 +36,22 @@ const Form = () => {
           <input
             className="form-check-input"
             type="radio"
-            name="flexRadioDefault"
+            name="singleSpace"
             id="flexRadioDefault1"
-          />
+            value={state.doubleSpace}
+            defaultChecked={state.doubleSpace}
+            onChange={()=> dispatch({type:'DOUBLE-SPACE'})}
+            />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
             Double spaces
           </label>
           <input
             className="form-check-input"
             type="radio"
-            name="flexRadioDefault"
+            name="singleSpace"
+            value={state.singleSpace}
             id="flexRadioDefault1"
+            onChange={()=> dispatch({type:'SINGLE-SPACE'})}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
             Single space
