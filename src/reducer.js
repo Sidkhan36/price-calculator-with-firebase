@@ -7,7 +7,7 @@ export const initialState = {
   page: 1,
   singleSpace: false,
   doubleSpace: true,
-  totalPrice: 0,
+  totalPrice: 0
   // totalPrice: this.startingPrice + this.gigWork.gigTypePrice + this.time.durationPrice + this.almaMater.levelPrice
 };
 
@@ -17,35 +17,36 @@ export function dispatcher(state, action) {
       return {
         ...state,
         tab: action.value,
-        totalPrice: state.totalPrice + state.tab.tabPrice
+        totalPrice: state.tab.tabPrice
       };
-    case "INCREMENT":
-      return {
-        ...state,
-        page: state.page++,
-        words: state.words + 275,
-      };
-    case "DECREMENT":
-      return {
-        ...state,
-        words: state.words - 275,
-        page: state.page--,
-      };
-    case "SELECT":
-      return {
-        ...state,
-        gigWork: action.value,
-      };
-    case "LEVEL":
-      return {
-        ...state,
-        almaMater: action.value,
-      };
-    case "TIME":
-      return {
-        ...state,
-        time: action.value,
-      };
+      case "SELECT":
+        return {
+          ...state,
+          gigWork: action.value,
+          totalPrice:state.gigWork.gigTypePrice
+        };
+        case "LEVEL":
+          return {
+            ...state,
+            almaMater: action.value,
+          };
+          case "TIME":
+            return {
+              ...state,
+              time: action.value,
+            };
+            case "INCREMENT":
+              return {
+                ...state,
+                page: state.page++,
+                words: state.words + 275,
+              };
+              case "DECREMENT":
+                return {
+                  ...state,
+                  words: state.words - 275,
+                  page: state.page--,
+                };
     case "DOUBLE-SPACE":
       return {
         ...state,

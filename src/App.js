@@ -15,9 +15,7 @@ function App() {
   return (
     <DispatchContext.Provider value={dispatch}>
     <OurContext.Provider value={{state,data}}>
-
     <div className="App">
-     
       <Form/>
     </div>
     </OurContext.Provider>
