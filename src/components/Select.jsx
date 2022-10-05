@@ -12,7 +12,7 @@ const Select = () => {
       <select
         className="form-select my-2"
       >
-        {data[0].gigType.map((gigtypename) => (
+        {data.gigType.map((gigtypename) => (
           <option
             onClick={() =>
               dispatch({

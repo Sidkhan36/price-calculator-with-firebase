@@ -9,7 +9,7 @@ const CatandTime = () => {
   return (
     <div className="categandtime d-flex justify-content-between my-2">
       <select className="form-select me-1">
-        {data[0].almaMater.map((level) => (
+        {data.almaMater.map((level) => (
           <option
             onClick={() =>
               dispatch({
@@ -24,7 +24,7 @@ const CatandTime = () => {
         ))}
       </select>
       <select className="form-select">
-        {data[0].timePeriod.map((timetoTake) => (
+        {data.timePeriod.map((timetoTake) => (
           <option
             onClick={() =>
               dispatch({

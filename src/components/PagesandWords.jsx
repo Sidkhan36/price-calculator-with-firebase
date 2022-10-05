@@ -49,8 +49,3 @@ const PagesandWords = () => {
 };
 
 export default PagesandWords;
-{
-  /* <option className='style'>1 Page / 275 words</option>
-<option className='style'>2 Page / 550 words</option>
-<option className='style'>3 Page / 825 words</option>  */
-}

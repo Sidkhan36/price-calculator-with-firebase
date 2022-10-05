@@ -11,8 +11,9 @@ const Form = () => {
   const { state } = useContext(OurContext);
   const dispatch = useContext(DispatchContext);
   console.log(state.singleSpace, state.doubleSpace);
+  console.log(state.totalPrice);
   let totalPrice =
-    state.startingPrice +
+    state.tabs.tabPrice +
     state.gigWork.gigTypePrice +
     state.almaMater.levelPrice +
     state.time.durationPrice;
