@@ -3,14 +3,18 @@ import DispatchContext from "../DispatchContext";
 import OurContext from "../OurContext";
 
 const CatandTime = () => {
-  const { data } = useContext(OurContext);
+  const { data, state } = useContext(OurContext);
   const dispatch = useContext(DispatchContext);
 
   return (
     <div className="categandtime d-flex justify-content-between my-2">
-      <select className="form-select me-1">
-        {data.almaMater.map((level) => (
-          <option
+      <div className="dropdown ">
+  <button className="btn bg-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    {state.almaMater.level === ''? 'Level(school,colle..)': state.almaMater.level}
+  </button>
+  <ul className="dropdown-menu">
+  {data.almaMater.map((level) => (
+          <div className=" dropdown-item "
             onClick={() =>
               dispatch({
                 type: "LEVEL",
@@ -20,12 +24,18 @@ const CatandTime = () => {
             key={level.level}
           >
             {level.level}
-          </option>
+          </div>
         ))}
-      </select>
-      <select className="form-select">
-        {data.timePeriod.map((timetoTake) => (
-          <option
+  </ul>
+</div>
+    
+      <div className="dropdown">
+  <button className="btn bg-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  {state.time.duration === ''? 'Time Period': state.time.duration}
+  </button>
+  <ul className="dropdown-menu">
+  {data.timePeriod.map((timetoTake) => (
+          <div className=" dropdown-item "
             onClick={() =>
               dispatch({
                 type: "TIME",
@@ -38,9 +48,12 @@ const CatandTime = () => {
             key={timetoTake.duration}
           >
             {timetoTake.duration}
-          </option>
+          </div>
         ))}
-      </select>
+
+  </ul>
+</div>
+    
     </div>
   );
 };

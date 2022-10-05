@@ -15,7 +15,7 @@ const Select = () => {
   </button>
   <ul className="dropdown-menu   ">
   {data.gigType.map((gigtypename) => (
-          <div className=" dropdown-item  "
+          <div className=" dropdown-item droplist " 
             onClick={() =>
               dispatch({
                 type: "SELECT",
@@ -31,33 +31,10 @@ const Select = () => {
             {gigtypename.gigTypeName}
           </div>
         ))}
-    {/* <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li> */}
   </ul>
 </div>
      
-      {/* <select
-        className="form-select my-2"
-      >
-        {data.gigType.map((gigtypename) => (
-          <option
-            onClick={() =>
-              dispatch({
-                type: "SELECT",
-                value: {
-                  id: gigtypename.id,
-                  gigTypeName: gigtypename.gigTypeName,
-                  gigTypePrice: gigtypename.gigTypePrice,
-                },
-              })
-            }
-            key={gigtypename.id}
-          >
-            {gigtypename.gigTypeName}
-          </option>
-        ))}
-      </select> */}
+    
     </div>
   );
 };

@@ -17,13 +17,13 @@ export function dispatcher(state, action) {
       return {
         ...state,
         tab: action.value,
-        totalPrice: state.tab.tabPrice
+        // totalPrice: state.tab.tabPrice
       };
       case "SELECT":
         return {
           ...state,
           gigWork: action.value,
-          totalPrice:state.gigWork.gigTypePrice
+          // totalPrice:state.gigWork.gigTypePrice
         };
         case "LEVEL":
           return {
@@ -66,6 +66,11 @@ export function dispatcher(state, action) {
         ...state,
         page: action.value,
         words: action.value,
+      };
+    case "TOTAL":
+      return {
+        ...state,
+        totalPrice: action.value,
       };
   }
 }

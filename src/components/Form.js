@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Tabs from "./Tabs";
 import Select from "./Select";
 import "./form.css";
@@ -10,19 +10,26 @@ import DispatchContext from "../DispatchContext";
 const Form = () => {
   const { state } = useContext(OurContext);
   const dispatch = useContext(DispatchContext);
-  console.log(state.singleSpace, state.doubleSpace);
+  // console.log(state.singleSpace, state.doubleSpace);
   let totalPrice =
   state.tab.tabPrice +
   state.gigWork.gigTypePrice +
   state.almaMater.levelPrice +
-  state.time.durationPrice;
+  state.time.durationPrice
   // console.log(state.gigWork)
   function submitHandler(e) {
     e.preventDefault();
   }
+  function dispatchtotal(totalPrice){
+    dispatch({type:'TOTAL', value:totalPrice})
+
+  }
+  useEffect(() => {
+    dispatchtotal(totalPrice)
+  }, [totalPrice])
+  
   
   console.log(state.page, state.words);
-  console.log(state.totalPrice);
   return (
     <div className="form rounded-2 p-3">
       <h3 style={{ textAlign: "start", padding: "10px" }}>
