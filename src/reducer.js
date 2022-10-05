@@ -1,5 +1,5 @@
 export const initialState = {
-  tabs:{id:'', tabName:'', tabPrice:0},
+  tab:{id:'', tabName:'', tabPrice:0},
   gigWork: { id: "", gigTypeName: "", gigTypePrice: 0 },
   time: { duration: "", durationPrice: 0 },
   almaMater: { level: "", levelPrice: 0 },
@@ -16,14 +16,14 @@ export function dispatcher(state, action) {
     case "TAB-SHIFT":
       return {
         ...state,
-        tabs: action.value
+        tab: action.value,
+        totalPrice: state.totalPrice + state.tab.tabPrice
       };
     case "INCREMENT":
       return {
         ...state,
         page: state.page++,
         words: state.words + 275,
-        totalPrice: state.startingPrice * state.page
       };
     case "DECREMENT":
       return {

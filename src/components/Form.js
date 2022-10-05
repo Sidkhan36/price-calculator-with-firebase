@@ -13,7 +13,7 @@ const Form = () => {
   console.log(state.singleSpace, state.doubleSpace);
   console.log(state.totalPrice);
   let totalPrice =
-    state.tabs.tabPrice +
+    state.tab.tabPrice +
     state.gigWork.gigTypePrice +
     state.almaMater.levelPrice +
     state.time.durationPrice;
