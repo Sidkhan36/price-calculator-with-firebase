@@ -6,6 +6,7 @@ const PagesandWords = () => {
   const { state } = useContext(OurContext);
   // const [page, setPage] = useState (state.page)
   // const pages = state.page >1? 'Pages': 'Page'
+  // const pages = state.page >1? 'Pages': 'Page'
   const pageandwords = [];
   // "1 Page / 275 words",
   // "2 Page / 550 words",
@@ -17,7 +18,7 @@ const PagesandWords = () => {
   // "8 Page / 2200 words",
   // "9 Page / 2475 words",
   for (let i = 1; i <= 50; i++) {
-    const item = `${state.page * i} pages / ${state.words * i} words`;
+    const item = `${i} pages / ${state.words * i} words`;
     // const item = `${state.page} Pages / ${state.words} Words `
     pageandwords.push(item);
   }
@@ -40,7 +41,7 @@ const PagesandWords = () => {
           aria-expanded="false"
         >
           {`${state.page} ${state.page > 1 ? "Pages" : "Page"} / ${
-            state.words
+            state.words 
           } Words`}
         </button>
         <ul className="dropdown-menu height">

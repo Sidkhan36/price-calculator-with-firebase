@@ -10,8 +10,11 @@ import DispatchContext from "../DispatchContext";
 const Form = () => {
   const { state } = useContext(OurContext);
   const dispatch = useContext(DispatchContext);
-  const [discount, setDiscount] = useState(false);
+  // const [discount, setDiscount] = useState(false);
   // console.log(state.singleSpace, state.doubleSpace);
+  const page = state.page
+  const words = state.words
+  // const pageSpace = state.singleSpace? state.words = 550: state.words = 275
   let totalPrice =
   state.tab.tabPrice +
   state.gigWork.gigTypePrice +
@@ -21,19 +24,19 @@ const Form = () => {
   function submitHandler(e) {
     e.preventDefault();
   }
-  function dispatchtotal(totalPrice){
-    dispatch({type:'TOTAL', value:totalPrice})
-
+  function dispatchtotal(totalPrice, page){
+    dispatch({type:'TOTAL', value:totalPrice * page})
+    
   }
   useEffect(() => {
-    dispatchtotal(totalPrice)
-  }, [totalPrice])
-  useEffect(() => {
-    if(state.singleSpace == true || state.page>=2 && state.words >= 550)
-      setDiscount(true)
-    else
-      setDiscount(false)
-  }, [state.singleSpace, state.page])
+    dispatchtotal(totalPrice,page)
+  }, [totalPrice,page])
+  // useEffect(() => {
+  //   if((state.singleSpace === true )|| (state.page>=2 && state.words >= 550))
+  //     setDiscount(true)
+  //   else
+  //     setDiscount(false)
+  // }, [state.singleSpace, state.page])
   
   console.log(state.page, state.words);
   return (
@@ -55,7 +58,7 @@ const Form = () => {
             id="flexRadioDefault1"
             value={state.doubleSpace}
             defaultChecked={state.doubleSpace}
-            onChange={() => dispatch({ type: "DOUBLE-SPACE" })}
+            onChange={() => dispatch({ type: "DOUBLE-SPACE", value:true})}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
             Double spaces
@@ -66,16 +69,16 @@ const Form = () => {
             name="singleSpace"
             value={state.singleSpace}
             id="flexRadioDefault1"
-            onChange={() => dispatch({ type: "SINGLE-SPACE" })}
+            onChange={() => dispatch({ type: "SINGLE-SPACE" ,value:true})}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
             Single space
           </label>
         </div>
-        {discount && <div className="">
+        {/* {discount && <div className="">
               <h5 className="m-0 fw-bold">$ {discount} OFF</h5>
               {console.log(discount)}
-            </div>}
+            </div>} */}
         <div className="d-flex justify-content-end align-items-center p-3">
           <h5 className="m-0 fw-bold">$ {state.totalPrice}</h5>
           {/* <h5 className="m-0 fw-bold">$ {state.page * totalPrice}</h5> */}
