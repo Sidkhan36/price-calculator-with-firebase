@@ -65,7 +65,6 @@ export function dispatcher(state, action) {
       return {
         ...state,
         page: action.value,
-        words: action.value,
       };
     case "TOTAL":
       return {

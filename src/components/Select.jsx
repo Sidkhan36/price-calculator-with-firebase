@@ -5,7 +5,7 @@ import OurContext from "../OurContext";
 const Select = () => {
   const { data, state } = useContext(OurContext);
   const dispatch = useContext(DispatchContext);
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="my-2 " >
@@ -13,7 +13,7 @@ const Select = () => {
   <button className=" btn bg-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     {state.gigWork.gigTypeName === ''? 'Essay (any type)': state.gigWork.gigTypeName}
   </button>
-  <ul className="dropdown-menu   ">
+  <div className="dropdown-menu   ">
   {data.gigType.map((gigtypename) => (
           <div className=" dropdown-item droplist " 
             onClick={() =>
@@ -31,7 +31,7 @@ const Select = () => {
             {gigtypename.gigTypeName}
           </div>
         ))}
-  </ul>
+  </div>
 </div>
      
     

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Tabs from "./Tabs";
 import Select from "./Select";
 import "./form.css";
@@ -10,6 +10,7 @@ import DispatchContext from "../DispatchContext";
 const Form = () => {
   const { state } = useContext(OurContext);
   const dispatch = useContext(DispatchContext);
+  const [discount, setDiscount] = useState(false);
   // console.log(state.singleSpace, state.doubleSpace);
   let totalPrice =
   state.tab.tabPrice +
@@ -27,7 +28,12 @@ const Form = () => {
   useEffect(() => {
     dispatchtotal(totalPrice)
   }, [totalPrice])
-  
+  useEffect(() => {
+    if(state.singleSpace == true || state.page>=2 && state.words >= 550)
+      setDiscount(true)
+    else
+      setDiscount(false)
+  }, [state.singleSpace, state.page])
   
   console.log(state.page, state.words);
   return (
@@ -66,6 +72,10 @@ const Form = () => {
             Single space
           </label>
         </div>
+        {discount && <div className="">
+              <h5 className="m-0 fw-bold">$ {discount} OFF</h5>
+              {console.log(discount)}
+            </div>}
         <div className="d-flex justify-content-end align-items-center p-3">
           <h5 className="m-0 fw-bold">$ {state.totalPrice}</h5>
           {/* <h5 className="m-0 fw-bold">$ {state.page * totalPrice}</h5> */}
