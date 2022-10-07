@@ -36,3 +36,13 @@ h4{
 /* .active:active{
     background-color: #3a5;
 } */
+.totalanddiscount{
+    line-height: 70px;
+}
+.line-through{
+    font-size: 14px;
+    text-decoration-line: line-through;
+}
+.discount-p{
+    background-color: #3a5;
+}
