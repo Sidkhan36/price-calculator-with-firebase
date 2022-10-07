@@ -36,36 +36,43 @@ export function dispatcher(state, action) {
               ...state,
               time: action.value,
             };
-            case "INCREMENT":
+            case "DOUBLE-SPACE":
               return {
                 ...state,
-                page: state.page++,
-                words: state.words  + 275,
+                doubleSpace:action.value,
+                singleSpace:state.singleSpace = false,
+                words:state.words = 275 * state.page
               };
-              case "DECREMENT":
+              case "SINGLE-SPACE":
                 return {
                   ...state,
-                  words: state.words - 275,
-                  page: state.page--,
+                  singleSpace:action.value,
+                  doubleSpace:state.doubleSpace = false,
+                  words:state.words = 550 * state.page
                 };
-    case "DOUBLE-SPACE":
-      return {
-        ...state,
-        doubleSpace:action.value,
-        singleSpace:state.singleSpace = false,
-        words:state.words - 275
-      };
-      case "SINGLE-SPACE":
-        return {
-          ...state,
-          singleSpace:action.value,
-          doubleSpace:state.doubleSpace = false,
-          words:state.words * state.page
-      };
+                case "INCREMENT":
+                  return {
+                    ...state,
+                    page: state.page++,
+                    words: state.words  + 275,
+                  };
+                case "SINGLE-SPACE-INCREMENT":
+                  return {
+                    ...state,
+                    page: state.page++,
+                    words: state.words  + 550,
+                  };
+                  case "DECREMENT":
+                    return {
+                      ...state,
+                      words: state.words - 275,
+                      page: state.page--,
+                    };
     case "PAGE-WORDS":
       return {
         ...state,
         page: action.value,
+        words:state.words = 275 * action.value
       };
     case "TOTAL":
       return {

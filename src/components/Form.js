@@ -13,20 +13,26 @@ const Form = () => {
   // const [discount, setDiscount] = useState(false);
   // console.log(state.singleSpace, state.doubleSpace);
   const page = state.page
-  const words = state.words
-  // const pageSpace = state.singleSpace? state.words = 550: state.words = 275
+  // const words = state.singleSpace? state.words
+  // const words = state.singleSpace? state.words = 550: state.words = 275
   let totalPrice =
   state.tab.tabPrice +
   state.gigWork.gigTypePrice +
   state.almaMater.levelPrice +
   state.time.durationPrice
+  
+  totalPrice =state.singleSpace?totalPrice*2:totalPrice
+  
   // console.log(state.gigWork)
   function submitHandler(e) {
     e.preventDefault();
   }
-  function dispatchtotal(totalPrice, page){
+  function wordsdispatcher(words){
+    dispatch({type:"SINGLE-SPACE",value:words})
+  }
+  function dispatchtotal(totalPrice, page, ){
     dispatch({type:'TOTAL', value:totalPrice * page})
-    
+  
   }
   useEffect(() => {
     dispatchtotal(totalPrice,page)

@@ -5,8 +5,8 @@ const PagesandWords = () => {
   const dispatch = useContext(DispatchContext);
   const { state } = useContext(OurContext);
   // const [page, setPage] = useState (state.page)
-  // const pages = state.page >1? 'Pages': 'Page'
-  // const pages = state.page >1? 'Pages': 'Page'
+  let pages =state.page
+  let words =state.words
   const pageandwords = [];
   // "1 Page / 275 words",
   // "2 Page / 550 words",
@@ -18,7 +18,7 @@ const PagesandWords = () => {
   // "8 Page / 2200 words",
   // "9 Page / 2475 words",
   for (let i = 1; i <= 50; i++) {
-    const item = `${i} pages / ${state.words * i} words`;
+    const item = pages = i
     // const item = `${state.page} Pages / ${state.words} Words `
     pageandwords.push(item);
   }
@@ -51,19 +51,20 @@ const PagesandWords = () => {
               onClick={() =>
                 dispatch({
                   type: "PAGE-WORDS",
-                  value: { page: pageandpages.page, words: pageandpages.words },
+                  value: pageandpages,
                 })
               }
               key={pageandpages}
             >
-              {pageandpages}
+              {`${pageandpages} ${pageandpages > 1? 'Pages':'Page'} / ${pageandpages * words}`}
             </li>
           ))}
         </ul>
       </div>
       <button
         className="btn btn-secondary fw-bold rounded-0 rounded-end"
-        onClick={() => dispatch({ type: "INCREMENT" })}
+        onClick={() => state.singleSpace? dispatch({type: 'SINGLE-SPACE-INCREMENT'}):dispatch({ type: "INCREMENT" })}
+        // onClick={() => dispatch({ type: "INCREMENT" })}
       >
         +
       </button>
