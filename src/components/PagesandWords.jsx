@@ -27,8 +27,9 @@ const PagesandWords = () => {
     <div className="d-flex ">
       {state.page > 1 && (
         <button
-          className="btn btn-secondary fw-bold rounded-0 rounded-start "
-          onClick={() => dispatch({ type: "DECREMENT" })}
+        className="btn btn-secondary fw-bold rounded-0 rounded-start "
+        // onClick={() => dispatch({ type: "DECREMENT" })}
+        onClick={() => state.singleSpace? dispatch({type: 'SINGLE-SPACE-DECREMENT'}):dispatch({ type: "DECREMENT" })}
         >
           -
         </button>
@@ -56,7 +57,7 @@ const PagesandWords = () => {
               }
               key={pageandpages}
             >
-              {`${pageandpages} ${pageandpages > 1? 'Pages':'Page'} / ${pageandpages * words}`}
+              {`${pageandpages} ${pageandpages > 1? 'Pages':'Page'} / ${pageandpages * state.words}`}
             </li>
           ))}
         </ul>

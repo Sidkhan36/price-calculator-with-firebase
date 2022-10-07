@@ -62,6 +62,12 @@ export function dispatcher(state, action) {
                     page: state.page++,
                     words: state.words  + 550,
                   };
+                case "SINGLE-SPACE-DECREMENT":
+                  return {
+                    ...state,
+                    page: state.page--,
+                    words: state.words  - 550,
+                  };
                   case "DECREMENT":
                     return {
                       ...state,
