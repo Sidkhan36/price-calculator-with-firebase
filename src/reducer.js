@@ -8,7 +8,8 @@ export const initialState = {
   page: 1,
   singleSpace: false,
   doubleSpace: true,
-  totalPrice: 0
+  totalPrice: 0,
+  discount:0
   // totalPrice: this.startingPrice + this.gigWork.gigTypePrice + this.time.durationPrice + this.almaMater.levelPrice
 };
 
@@ -48,7 +49,8 @@ export function dispatcher(state, action) {
                   ...state,
                   singleSpace:action.value,
                   doubleSpace:state.doubleSpace = false,
-                  words:state.words = 550 * state.page
+                  words:state.words = 550 * state.page,
+                  totalPrice:state.totalPrice * state.page
                 };
                 case "INCREMENT":
                   return {
@@ -61,6 +63,7 @@ export function dispatcher(state, action) {
                     ...state,
                     page: state.page++,
                     words: state.words  + 550,
+                    totalPrice:state.totalPrice * state.page
                   };
                 case "SINGLE-SPACE-DECREMENT":
                   return {
@@ -84,6 +87,11 @@ export function dispatcher(state, action) {
       return {
         ...state,
         totalPrice: action.value,
+      };
+    case "DISCOUNTED-PRICE":
+      return {
+        ...state,
+        discount: action.value,
       };
   }
 }
