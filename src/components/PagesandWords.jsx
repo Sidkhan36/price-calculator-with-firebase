@@ -22,14 +22,17 @@ const PagesandWords = () => {
     // const item = `${state.page} Pages / ${state.words} Words `
     pageandwords.push(item);
   }
-  console.log(state.page, state.words);
+  // console.log(state.page, state.words);
   return (
     <div className="d-flex ">
       {state.page > 1 && (
         <button
         className="btn btn-secondary fw-bold rounded-0 rounded-start "
         // onClick={() => dispatch({ type: "DECREMENT" })}
-        onClick={() => state.singleSpace? dispatch({type: 'SINGLE-SPACE-DECREMENT'}):dispatch({ type: "DECREMENT" })}
+        onClick={(e) => {
+            e.preventDefault()
+          state.singleSpace? dispatch({type: 'SINGLE-SPACE-DECREMENT'}):dispatch({ type: "DECREMENT" })}
+        } 
         >
           -
         </button>
@@ -64,7 +67,9 @@ const PagesandWords = () => {
       </div>
       <button
         className="btn btn-secondary fw-bold rounded-0 rounded-end"
-        onClick={() => state.singleSpace? dispatch({type: 'SINGLE-SPACE-INCREMENT'}):dispatch({ type: "INCREMENT" })}
+        onClick={(e) => {
+            e.preventDefault()
+          state.singleSpace? dispatch({type: 'SINGLE-SPACE-INCREMENT'}):dispatch({ type: "INCREMENT" })}}
         // onClick={() => dispatch({ type: "INCREMENT" })}
       >
         +

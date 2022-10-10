@@ -1,15 +1,16 @@
 
 export const initialState = {
+  isLoggedIn:true,
   tab:{id:'', tabName:'', tabPrice:0},
-  gigWork: { id: "", gigTypeName: "", gigTypePrice: 0 },
-  time: { duration: "", durationPrice: 0 },
-  almaMater: { level: "", levelPrice: 0 },
+  gigWork: { id: '', gigTypeName: '', gigTypePrice: 0 },
+  time: { duration: '', durationPrice: 0 },
+  almaMater: { level: '', levelPrice: 0 },
   words: 275,
   page: 1,
   singleSpace: false,
   doubleSpace: true,
   totalPrice: 0,
-  discount:0
+  discountedPrice:5  
   // totalPrice: this.startingPrice + this.gigWork.gigTypePrice + this.time.durationPrice + this.almaMater.levelPrice
 };
 
@@ -91,7 +92,12 @@ export function dispatcher(state, action) {
     case "DISCOUNTED-PRICE":
       return {
         ...state,
-        discount: action.value,
+        discountedPrice: action.value,
+      };
+    case "submitHandler":
+      return {
+        ...state,
+        isLoggedIn: action.value,
       };
   }
 }
