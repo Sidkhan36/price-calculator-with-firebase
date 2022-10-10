@@ -4,23 +4,23 @@ const Footer = () => {
   return (
    
 
-<footer class="footer-area footer--light">
-  <div class="footer-big">
+<footer className="footer-area footer--light">
+  <div className="footer-big">
     {/* <!-- start .container --> */}
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-12">
-          <div class="footer-widget">
-            <div class="widget-about">
-              <img src="http://placehold.it/250x80" alt="" class="img-fluid" />
+    <div className="container">
+      <div className="row">
+        <div className="col-md-3 col-sm-12">
+          <div className="footer-widget">
+            <div className="widget-about">
+              <img src="http://placehold.it/250x80" alt="" className="img-fluid" />
               <p>lorem ipsum</p>
-              <ul class="contact-details">
+              <ul className="contact-details">
                 <li>
-                  <span class="icon-earphones"></span> Call Us:
+                  <span className="icon-earphones"></span> Call Us:
                   <a href="tel:344-755-111">344-755-111</a>
                 </li>
                 <li>
-                  <span class="icon-envelope-open"></span>
+                  <span className="icon-envelope-open"></span>
                   <a href="mailto:support@aazztech.com">support@aazztech.com</a>
                 </li>
               </ul>
@@ -29,10 +29,10 @@ const Footer = () => {
           {/* <!-- Ends: .footer-widget --> */}
         </div>
         {/* <!-- end /.col-md-4 --> */}
-        <div class="col-md-3 col-sm-4">
-          <div class="footer-widget">
-            <div class="footer-menu footer-menu--1">
-              <h4 class="footer-widget-title">Popular Category</h4>
+        <div className="col-md-3 col-sm-4">
+          <div className="footer-widget">
+            <div className="footer-menu footer-menu--1">
+              <h4 className="footer-widget-title">Popular Category</h4>
               <ul>
                 <li>
                   <a href="#">Wordpress</a>
@@ -57,10 +57,10 @@ const Footer = () => {
         </div>
         {/* <!-- end /.col-md-3 --> */}
 
-        <div class="col-md-3 col-sm-4">
-          <div class="footer-widget">
-            <div class="footer-menu">
-              <h4 class="footer-widget-title">Our Company</h4>
+        <div className="col-md-3 col-sm-4">
+          <div className="footer-widget">
+            <div className="footer-menu">
+              <h4 className="footer-widget-title">Our Company</h4>
               <ul>
                 <li>
                   <a href="#">About Us</a>
@@ -91,10 +91,10 @@ const Footer = () => {
         </div>
         {/* <!-- end /.col-lg-3 --> */}
 
-        <div class="col-md-3 col-sm-4">
-          <div class="footer-widget">
-            <div class="footer-menu no-padding">
-              <h4 class="footer-widget-title">Help Support</h4>
+        <div className="col-md-3 col-sm-4">
+          <div className="footer-widget">
+            <div className="footer-menu no-padding">
+              <h4 className="footer-widget-title">Help Support</h4>
               <ul>
                 <li>
                   <a href="#">Support Forum</a>
@@ -132,19 +132,19 @@ const Footer = () => {
   </div>
   {/* <!-- end /.footer-big --> */}
 
-  <div class="mini-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="copyright-text">
-            <p>© 2018
-              <a href="#">DigiPro</a>. All rights reserved. Created by
-              <a href="#">AazzTech</a>
+  <div className="mini-footer">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12">
+          <div className="copyright-text">
+            <p>© 2022
+              <a href="#">MetaPer</a>. All rights reserved. Created by
+              <a href="#">MetaPer</a>
             </p>
           </div>
 
-          <div class="go_top">
-            <span class="icon-arrow-up"></span>
+          <div className="go_top">
+            <span className="icon-arrow-up"></span>
           </div>
         </div>
       </div>

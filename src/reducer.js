@@ -1,6 +1,6 @@
 
 export const initialState = {
-  isLoggedIn:true,
+  isLoggedIn:false,
   tab:{id:'', tabName:'', tabPrice:0},
   gigWork: { id: '', gigTypeName: '', gigTypePrice: 0 },
   time: { duration: '', durationPrice: 0 },
