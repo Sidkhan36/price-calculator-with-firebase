@@ -1,5 +1,7 @@
 import React from 'react'
 import Form from '../components/Form'
+import writing from '../writing.jpg'
+import writing2 from '../writing 2.jpg'
 
 const Home = () => {
   return (
@@ -14,7 +16,6 @@ const Home = () => {
           </button>
         </div>
         <div className='price-calc m-3'>
-
           <Form/> 
         </div>
       </div>
@@ -86,7 +87,7 @@ const Home = () => {
                     <div className="row gx-5">
                         <div className="col-lg-4 mb-5">
                             <div className="card h-100 shadow border-0">
-                                <img className="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="..." />
+                                <img className="card-img-top" src={writing} alt="..." />
                                 <div className="card-body p-4">
                                     <div className="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
                                     <a className="text-decoration-none link-dark stretched-link" href="#!"><h5 className="card-title mb-3">Blog post title</h5></a>
@@ -107,7 +108,7 @@ const Home = () => {
                         </div>
                         <div className="col-lg-4 mb-5">
                             <div className="card h-100 shadow border-0">
-                                <img className="card-img-top" src="https://dummyimage.com/600x350/adb5bd/495057" alt="..." />
+                                <img className="card-img-top" src={writing2} alt="..." />
                                 <div className="card-body p-4">
                                     <div className="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
                                     <a className="text-decoration-none link-dark stretched-link" href="#!"><h5 className="card-title mb-3">Another blog post title</h5></a>
@@ -128,7 +129,7 @@ const Home = () => {
                         </div>
                         <div className="col-lg-4 mb-5">
                             <div className="card h-100 shadow border-0">
-                                <img className="card-img-top" src="https://dummyimage.com/600x350/6c757d/343a40" alt="..." />
+                                <img className="card-img-top" src={writing} alt="..." />
                                 <div className="card-body p-4">
                                     <div className="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
                                     <a className="text-decoration-none link-dark stretched-link" href="#!"><h5 className="card-title mb-3">The last blog post title is a little bit longer than the others</h5></a>

@@ -23,11 +23,14 @@ const Nav = () => {
             id="navbarCollapse"
           >
             <div className="navbar-nav">
-              <Link to="/" className="nav-item nav-link active">
+              <Link to="/" className="nav-item nav-link border-hover">
                 Home
               </Link>
-              <Link to="/pricing" className="nav-item nav-link active">
+              <Link to="/pricing" className="nav-item nav-link">
                 Pricing
+              </Link>
+              <Link to="/about" className="nav-item nav-link ">
+                About
               </Link>
               <a href="#" className="nav-item nav-link">
                 Profile
@@ -41,7 +44,7 @@ const Nav = () => {
                   Services
                 </a>
                 <div className="dropdown-menu">
-                  <a href="#" className="dropdown-item">
+                  <a href="#" className="dropdown-item ">
                     Wordpress Website
                   </a>
                   <a href="#" className="dropdown-item">

@@ -9,6 +9,7 @@ import data from './data'
 import { Routes, Route, Link } from "react-router-dom";
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
+import About from './pages/About';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="login" element={<LogIn />} />
         <Route path="pricing" element={<Pricing />} />
+        <Route path="about" element={<About />} />
       </Routes>
     </div>
     </OurContext.Provider>

@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+.intro-top{
+  /* background-image: url('./writing 2.jpg'); */
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
