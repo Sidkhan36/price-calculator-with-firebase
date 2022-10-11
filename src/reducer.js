@@ -1,6 +1,6 @@
 
 export const initialState = {
-  isLoggedIn:true,
+  isLoggedIn:false,
   tab:{id:'', tabName:'', tabPrice:0},
   gigWork: { id: '', gigTypeName: '', gigTypePrice: 0 },
   time: { duration: '', durationPrice: 0 },
@@ -10,7 +10,7 @@ export const initialState = {
   singleSpace: false,
   doubleSpace: true,
   totalPrice: 0,
-  discountedPrice:5  
+  discounts:0  
   // totalPrice: this.startingPrice + this.gigWork.gigTypePrice + this.time.durationPrice + this.almaMater.levelPrice
 };
 
@@ -92,7 +92,7 @@ export function dispatcher(state, action) {
     case "DISCOUNTED-PRICE":
       return {
         ...state,
-        discountedPrice: action.value,
+        discounts: action.value,
       };
     case "submitHandler":
       return {
