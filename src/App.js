@@ -4,10 +4,11 @@ import { useEffect, useReducer, useState } from 'react';
 import OurContext from './OurContext';
 import DispatchContext from './DispatchContext';
 import { initialState, dispatcher } from './reducer';
-import LogIn from './pages/LogIn';
+import LogIn from './pages/Login';
 import data from './data'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Routes, Route, Link } from "react-router-dom";
 import Home from './pages/Home';
+import Pricing from './pages/Pricing';
 
 
 function App() {
@@ -17,14 +18,14 @@ function App() {
   return (
     <DispatchContext.Provider value={dispatch}>
     <OurContext.Provider value={{state,data}}>
-    <BrowserRouter>
+  
     <div className="App">
-    </div>
     <Routes>
-        <Route path="/" element={<Home />}/>
-         <Route path="login" element={<LogIn />} /> 
+        <Route path="/" element={<Home />} />
+        <Route path="login" element={<LogIn />} />
+        <Route path="pricing" element={<Pricing />} />
       </Routes>
-    </BrowserRouter>
+    </div>
     </OurContext.Provider>
     </DispatchContext.Provider>
   );

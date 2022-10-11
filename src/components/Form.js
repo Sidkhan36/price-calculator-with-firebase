@@ -7,7 +7,7 @@ import CatandTime from "./CatandTime";
 import PagesandWords from "./PagesandWords";
 import OurContext from "../OurContext";
 import DispatchContext from "../DispatchContext";
-import LogIn from "../pages/LogIn";
+import LogIn from "../pages/Login";
 import { Link, Route, useNavigate } from "react-router-dom";
 const Form = () => {
   const { state } = useContext(OurContext);

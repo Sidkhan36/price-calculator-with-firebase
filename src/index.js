@@ -1,15 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import LayoutWrapper from './layout/LayoutWrapper';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import LayoutWrapper from "./layout/LayoutWrapper";
+import { BrowserRouter } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <LayoutWrapper>
-    <App />
-    </LayoutWrapper>
+    <BrowserRouter>
+      <LayoutWrapper>
+        <App />
+      </LayoutWrapper>
+    </BrowserRouter>
   </React.StrictMode>
 );
-
