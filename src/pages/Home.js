@@ -6,16 +6,16 @@ import writing2 from '../writing 2.jpg'
 const Home = () => {
   return (
     <div>
-      <div className='intro-top d-flex justify-content-evenly'>
+      <div className='intro-top d-flex justify-content-evenly m-0'>
         <div className='intro-inner m-3 p-5 '>
           <h1>Ready to Ace Your "Write My Essay" Request</h1>
           <p>Our top-level essay writing service will take away all your education-related worries.</p>
-          <button className="btn btn-primary" type="button"
+          <a href='#price-calc' className="btn btn-primary" 
           >
             Write My Paper
-          </button>
+          </a>
         </div>
-        <div className='price-calc m-3'>
+        <div id='price-calc'>
           <Form/> 
         </div>
       </div>

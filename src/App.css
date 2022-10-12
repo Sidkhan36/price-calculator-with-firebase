@@ -41,3 +41,16 @@
   background-repeat: no-repeat;
   overflow: hidden;
 }
+@media (max-width: 575.98px) { 
+
+}
+@media (max-width: 767.98px) { 
+  
+  .intro-top{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  }

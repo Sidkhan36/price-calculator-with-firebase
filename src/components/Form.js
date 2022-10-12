@@ -39,17 +39,18 @@ const Form = () => {
       navigate('/login')
     }
   }
-  // function discounted(totalPrice){
-  //   const discount =5
-  //   return totalPrice = (totalPrice/100) * discount
-  // }
 
 function dispatchtotal(totalPrice, page) {
   let totalPrices = totalPrice * page 
   
   dispatch({ type: "TOTAL", value: totalPrices}); 
-
-    dispatch({type:"DISCOUNTED-PRICE",value:totalPrices-(totalPrices-(totalPrices/100*discount))})
+  
+  if(totalPrices >= 20){
+    dispatch({type:"DISCOUNTED-PRICE", value:totalPrices-(totalPrices-(totalPrices/100*discount))})
+    totalPrices = totalPrices-state.discounts
+    dispatch({ type: "TOTAL", value:totalPrices }); 
+  }
+  
 }
 useEffect(() => {
   dispatchtotal(totalPrice, page);
@@ -63,8 +64,7 @@ useEffect(() => {
   // }, [state.singleSpace, state.page]);
 
   // console.log(state.page, state.words);
-  // console.log(state.discountedPrice);
-
+  console.log(state.discounts)
   return (
     <div className="form rounded-2 p-3">
       <h3 style={{ textAlign: "start", padding: "10px" }}>
