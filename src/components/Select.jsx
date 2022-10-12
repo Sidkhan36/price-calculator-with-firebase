@@ -26,7 +26,7 @@ const Select = () => {
                 },
               })
             }
-            key={gigtypename.id}
+            key={gigtypename.id} name="gigTypeName" value={state.gigWork}
           >
             {gigtypename.gigTypeName}
           </div>

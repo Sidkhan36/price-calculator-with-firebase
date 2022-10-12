@@ -14,17 +14,17 @@ const CatandTime = () => {
   </button>
   <ul className="dropdown-menu">
   {data.almaMater.map((level) => (
-          <div className=" dropdown-item "
+          <li className=" dropdown-item "
             onClick={() =>
               dispatch({
                 type: "LEVEL",
                 value: { level: level.level, levelPrice: level.levelPrice },
               })
             }
-            key={level.level}
+            key={level.level} name="level" value={level.level}
           >
             {level.level}
-          </div>
+          </li>
         ))}
   </ul>
 </div>
@@ -45,7 +45,7 @@ const CatandTime = () => {
                 },
               })
             }
-            key={timetoTake.duration}
+            key={timetoTake.duration} name="duration" value={state.time}
           >
             {timetoTake.duration}
           </div>

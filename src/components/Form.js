@@ -1,4 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser"
 import Tabs from "./Tabs";
 import Select from "./Select";
 import "./form.css";
@@ -13,7 +14,7 @@ const Form = () => {
   const { state } = useContext(OurContext);
   const dispatch = useContext(DispatchContext);
   const [discount, setDiscount] = useState(5);
-  
+  const form = useRef();
   let navigate = useNavigate()
   // console.log(state.singleSpace, state.doubleSpace);
   const page = state.page;
@@ -26,10 +27,29 @@ const Form = () => {
     state.time.durationPrice;
     
     // let discount = state.discount
-  totalPrice = state.singleSpace ? totalPrice * 2 : totalPrice;
-  // console.log(state.gigWork)
+    totalPrice = state.singleSpace ? totalPrice * 2 : totalPrice;
+    // console.log(state.gigWork)
+    var templateParams ={
+      tab:state.tab.tabName,
+      gigWork:state.gigWork.gigTypeName,
+      page:state.page,
+      words:state.words,
+      totalPrice:state.totalPrice,
+      discount:state.discounts,
+      almaMater:state.almaMater.level,
+      time:state.time.duration,
+      singleSpace:state.singleSpace,
+      doubleSpace:state.doubleSpace
+    }
   function submitHandler(e) {
     e.preventDefault();
+    
+    emailjs.send('service_cn99oxi', 'template_txgarf8', templateParams , '7GYfRZcvdQfUyEibT')
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+   }, function(error) {
+      console.log('FAILED...', error);
+      });
     if(state.isLoggedIn){
 
       console.log(state)
@@ -135,9 +155,7 @@ useEffect(() => {
           </div>
         </div>
         <div className="d-grid gap-2">
-          <button className="btn btn-primary" type="button"
-            onClick={submitHandler}
-          >
+          <button className="btn btn-primary" type="submit">
             Write My Paper
           </button>
         </div>

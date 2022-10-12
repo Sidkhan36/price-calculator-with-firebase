@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import DispatchContext from "../DispatchContext";
 import OurContext from "../OurContext";
 const Tabs = () => {
-  const { data } = useContext(OurContext);
+  const { data, state } = useContext(OurContext);
   const dispatch = useContext(DispatchContext);
   // console.log(state.)
   return (
@@ -37,8 +37,8 @@ const Tabs = () => {
               },
             })
           }
-          key={tab.id}
-          className="page-item btn"><a className="btn page-link"> {tab.gigName}</a></li> ))}
+          key={tab.id} value={state.tab}
+          className="page-item btn"><a className="btn page-link" name="gigName"> {tab.gigName}</a></li> ))}
   </ul>
 </nav>
     </div>
