@@ -44,19 +44,32 @@ function dispatchtotal(totalPrice, page) {
   let totalPrices = totalPrice * page 
   
   dispatch({ type: "TOTAL", value: totalPrices}); 
-  
-  if(totalPrices >= 20){
+  if(totalPrices >=30 && totalPrices <=40)
+  setDiscount(10)
+else if(totalPrices >=40 && totalPrices <=50)
+  setDiscount(15)
+else if(totalPrices >=50 && totalPrices <=60)
+  setDiscount(20)
+else if(totalPrices >=60 && totalPrices <=70)
+  setDiscount(25)
+else if(totalPrices >=70 && totalPrices <=80)
+  setDiscount(30)
+else if(totalPrices >=80 && totalPrices <=90)
+  setDiscount(35)
+else if(totalPrices >=170)
+  setDiscount(40)
+  // if(totalPrices >= 20){
     dispatch({type:"DISCOUNTED-PRICE", value:totalPrices-(totalPrices-(totalPrices/100*discount))})
-    totalPrices = totalPrices-state.discounts
-    dispatch({ type: "TOTAL", value:totalPrices }); 
-  }
+    // totalPrices = totalPrices-discount
+    // dispatch({ type: "TOTAL", value:totalPrices }); 
+  // }
   
 }
 useEffect(() => {
   dispatchtotal(totalPrice, page);
   // let discounts = discounted(totalPrice)
   // console.log(`this is discount :${discounts}`)
-  }, [totalPrice,page]);
+  }, [totalPrice,page, discount]);
   // useEffect(() => {
   //   if (state.singleSpace === true || (state.page >= 2 && state.words >= 550))
   //     setDiscount(true);
@@ -107,7 +120,7 @@ useEffect(() => {
             <p className="discount-p  m-0 text-white text-sm-start rounded-1 p-1">
               {(state.singleSpace || state.words >= 550) && `${discount}% OFF`}  
               </p>
-              <span className="line-through p-1">{discount > 0 && (state.totalPrice.toFixed(2))}</span>
+              <span className="line-through p-1">{discount > 0 && (state.totalPrice.toFixed(  2))}</span>
             </>
               }
           </div>
