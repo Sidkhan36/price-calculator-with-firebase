@@ -13,9 +13,9 @@ const Select = () => {
   <button className=" btn bg-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     {state.gigWork.gigTypeName === ''? 'Essay (any type)': state.gigWork.gigTypeName}
   </button>
-  <div className="dropdown-menu   ">
+  <div className="dropdown-menu droplist  ">
   {data.gigType.map((gigtypename) => (
-          <div className=" dropdown-item droplist " 
+          <div className=" dropdown-item  " 
             onClick={() =>
               dispatch({
                 type: "SELECT",

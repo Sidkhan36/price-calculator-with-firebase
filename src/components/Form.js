@@ -29,13 +29,13 @@ const Form = () => {
     // let discount = state.discount
     totalPrice = state.singleSpace ? totalPrice * 2 : totalPrice;
     // console.log(state.gigWork)
-    var templateParams ={
+    var templateParams = {
       tab:state.tab.tabName,
       gigWork:state.gigWork.gigTypeName,
       page:state.page,
       words:state.words,
       totalPrice:state.totalPrice,
-      discount:state.discounts,
+      discounts:state.discounts,
       almaMater:state.almaMater.level,
       time:state.time.duration,
       singleSpace:state.singleSpace,
@@ -78,11 +78,11 @@ else if(totalPrices >=80 && totalPrices <=90)
   setDiscount(35)
 else if(totalPrices >=170)
   setDiscount(40)
-  // if(totalPrices >= 20){
+  if(totalPrices >= 20){
+    dispatch({type:"TOTAL", value:totalPrices-(totalPrices/100*discount)})
     dispatch({type:"DISCOUNTED-PRICE", value:totalPrices-(totalPrices-(totalPrices/100*discount))})
-    // totalPrices = totalPrices-discount
     // dispatch({ type: "TOTAL", value:totalPrices }); 
-  // }
+  }
   
 }
 useEffect(() => {
@@ -140,14 +140,14 @@ useEffect(() => {
             <p className="discount-p  m-0 text-white text-sm-start rounded-1 p-1">
               {(state.singleSpace || state.words >= 550) && `${discount}% OFF`}  
               </p>
-              <span className="line-through p-1">{discount > 0 && (state.totalPrice.toFixed(  2))}</span>
+              <span className="line-through p-1">{discount > 0 && ((state.totalPrice+state.discounts).toFixed(  2))}</span>
             </>
               }
           </div>
           <div className="d-flex  justify-content-end align-items-center p-3">
             {/* <h5 className="m-0 fw-bold">$ {state.totalPrice >= 20?state.discount.toFixed(2):state.totalPrice.toFixed(2)}</h5> */}
 
-            <h5 className="m-0 fw-bold">$ {state.totalPrice >= 20?(state.totalPrice-state.discounts).toFixed(2):state.totalPrice.toFixed(2)}</h5>
+            <h5 className="m-0 fw-bold">$ {state.totalPrice >= 20?(state.totalPrice).toFixed(2):state.totalPrice.toFixed(2)}</h5>
             {/* <h5 className="m-0 fw-bold">$ {state.totalPrice.toFixed(2)}</h5> */}
             {/* <h5 className="m-0 fw-bold">$ {state.page * totalPrice}</h5> */}
             {console.log(state.totalPrice, state.discounts)}
