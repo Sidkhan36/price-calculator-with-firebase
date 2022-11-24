@@ -1,25 +1,74 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import profilepic from '../profilepic2.jpg'
-const Login = () => {
-  function submitHandler(e){
-    e.preventDefault()
-  }
-  return (
-    <div className='login-page'>
-      <div className=' d-flex justify-content-center align-items-center p-5'>
+import React, { useContext, useRef, useState } from "react"
+import { Form, Button, Card, Alert } from "react-bootstrap"
+import { useAuth } from "../contexts/AuthContext"
+import { Link, useNavigate } from "react-router-dom"
+import { Container } from "react-bootstrap"
+import DispatchContext from "../contexts/DispatchContext";
 
-      <form className='d-flex flex-column justify-content-center align-items-center form p-4' onSubmit={submitHandler}>    
-      <img src={profilepic} className="rounded-circle" width="100px"alt="UserProfilePicture"/>
-        <input type='text' className='form-control my-2' placeholder='Email@example.com'/>
-        <input type='password' className='form-control my-2' placeholder='Password'/> 
-        <Link to='/passwordreset alig-self-end'>Forgot Password</Link>
-        <button className='btn btn-primary m-1'>Log In</button>
-        <Link to='/signup'>Create Account</Link>
-      </form>
-      </div>
-    </div>
+
+export default function Login() {
+  // const { state } = useContext(OurContext);
+  const dispatch = useContext(DispatchContext);
+
+
+
+  const emailRef = useRef()
+  const passwordRef = useRef()
+  const { login } = useAuth()
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+  const history = useNavigate()
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+
+    try {
+      setError("")
+      setLoading(true)
+      await login(emailRef.current.value, passwordRef.current.value)
+      dispatch({ type: "CURRENT-USER", value: true })
+      history("/")
+    } catch {
+      setError("Failed to log in")
+    }
+
+    setLoading(false) 
+  }
+
+  return (
+    <>
+      <Container
+        className="d-flex align-items-center justify-content-center"
+        style={{ minHeight: "100vh" }}>
+        <div className="w-100" style={{ maxWidth: "400px" }}>
+          <Card>
+            <Card.Body>
+              <h2 className="text-center mb-4">Log In</h2>
+              {error && <Alert variant="danger">{error}</Alert>}
+              <Form onSubmit={handleSubmit}>
+                <Form.Group id="email">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type="email" ref={emailRef} required />
+                </Form.Group>
+                <Form.Group id="password">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type="password" ref={passwordRef} required />
+                </Form.Group>
+                <br />
+                <Button disabled={loading} className="w-100" type="submit">
+                  Log In
+                </Button>
+              </Form>
+              <div className="w-100 text-center mt-3">
+                <Link to="/forgot-password">Forgot Password?</Link>
+              </div>
+            </Card.Body>
+          </Card>
+          <div className="w-100 text-center mt-2">
+            Need an account? <Link to="/signup">Sign Up</Link>
+          </div>
+        </div>
+      </Container>
+    </>
   )
 }
-
-export default Login

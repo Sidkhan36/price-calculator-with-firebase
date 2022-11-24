@@ -53,4 +53,14 @@
     align-items: center;
   
   }
+  }  
+
+  .form-error {
+    font-size: 1rem;
+    color: #b22b27;
+  }
+  .list-style-circle li{
+    /* content: "."; */
+    list-style: disc;
+    text-align: start;
   }

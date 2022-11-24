@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import DispatchContext from "../DispatchContext";
-import OurContext from "../OurContext";
+import DispatchContext from "../contexts/DispatchContext";
+import OurContext from "../contexts/OurContext";
 
 const Select = () => {
   const { data, state } = useContext(OurContext);

@@ -10,7 +10,7 @@ export const initialState = {
   singleSpace: false,
   doubleSpace: true,
   totalPrice: 0,
-  discounts:0  
+  discounts:0,  
   // totalPrice: this.startingPrice + this.gigWork.gigTypePrice + this.time.durationPrice + this.almaMater.levelPrice
 };
 
@@ -53,6 +53,12 @@ export function dispatcher(state, action) {
                   words:state.words = 550 * state.page,
                   totalPrice:state.totalPrice * state.page
                 };
+
+                case "CURRENT-USER":
+                  return {
+                    ...state,
+                    isLoggedIn: action.value
+                  };
                 case "INCREMENT":
                   return {
                     ...state,

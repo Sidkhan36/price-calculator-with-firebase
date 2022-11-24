@@ -1,15 +1,44 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import './nav.css'
+import OurContext from "../../../contexts/OurContext";
+import DispatchContext from "../../../contexts/DispatchContext";
+import { Card, Button, Alert } from "react-bootstrap"
+import {useAuth} from "../../../contexts/AuthContext"
+import { useNavigate } from "react-router-dom"
+import { Container } from "react-bootstrap"
+
+
 
 const Nav = () => {
+  // const { state } = useContext(OurContext);
+  // const isLoggedIn = state.isLoggedIn
+  // const dispatch = useContext(DispatchContext);
+  // const currentUser1 = state.current_User;
+  
+  const [error, setError] = useState("")
+  const { currentUser, logout } = useAuth()
+    // console.log(currentUser);
+  const history = useNavigate()
+// console.log(useNavigate)
+  async function handleLogout() {
+    setError("")
+
+    try {
+      await logout()
+      history("/login")
+    } catch {
+      setError("Failed to log out")
+    }
+  }
+
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a href="#" className="navbar-brand">
+          <Link to="/" className="navbar-brand">
             MetaPer
-          </a>
+          </Link>
           <button
             type="button"
             className="navbar-toggler"
@@ -32,9 +61,9 @@ const Nav = () => {
               <Link to="/about" className="nav-item nav-link ">
                 About
               </Link>
-              <a href="#" className="nav-item nav-link">
+              <Link to="/dashboard" className="nav-item nav-link">
                 Profile
-              </a>
+              </Link>
               <div className="nav-item dropdown">
                 <a
                   href="#"
@@ -48,7 +77,7 @@ const Nav = () => {
                     Wordpress Website
                   </a>
                   <a href="#" className="dropdown-item">
-                    React Front-End 
+                    React Front-End
                   </a>
                   <a href="#" className="dropdown-item">
                     PSD To Bootstrap/Custom
@@ -72,9 +101,16 @@ const Nav = () => {
               </div>
             </form>
             <div className="navbar-nav">
+            {currentUser && <p className="mx-4 my-1">{currentUser.multiFactor.user.email}</p>}
+           {currentUser?<Link className="nav-item nav-link" onClick={handleLogout}>
+                Logout
+              </Link>:
               <Link to="/login" className="nav-item nav-link">
                 Login
-              </Link>
+              </Link>}
+              {!currentUser && <Link to="/signup" className="nav-item nav-link">
+                Sign up
+              </Link>}
             </div>
           </div>
         </div>

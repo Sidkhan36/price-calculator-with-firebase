@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import DispatchContext from "../DispatchContext";
-import OurContext from "../OurContext";
+import DispatchContext from "../contexts/DispatchContext";
+import OurContext from "../contexts/OurContext";
 const PagesandWords = () => {
   const dispatch = useContext(DispatchContext);
   const { state } = useContext(OurContext);
@@ -17,14 +17,14 @@ const PagesandWords = () => {
   // "7 Page / 1925 words",
   // "8 Page / 2200 words",
   // "9 Page / 2475 words",
-  for (let i = 1; i <= 50; i++) {
-    const item = pages = i
-    // const item = `${state.page} Pages / ${state.words} Words `
-    pageandwords.push(item);
-  }
+  // for (let i = 1; i <= 50; i++) {
+  //   const item = pages = i
+  //   // const item = `${state.page} Pages / ${state.words} Words `
+  //   pageandwords.push(item);
+  // }
   // console.log(state.page, state.words);
   return (
-    <div className="d-flex ">
+    <div className="d-flex justify-content-evenly">
       {state.page > 1 && (
         <button
         className="btn btn-secondary fw-bold rounded-0 rounded-start "
@@ -37,18 +37,20 @@ const PagesandWords = () => {
           -
         </button>
       )}
-      <div className="dropdown ">
-        <button
+      <div className="px-4 py-2">
+        {/* <button
           className="btn bg-light rounded-0 rounded-end dropdown-toggle"
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
+        </button> */}
           {`${state.page} ${state.page > 1 ? "Pages" : "Page"} / ${
             state.words 
           } Words`}
-        </button>
-        <ul className="dropdown-menu height">
+
+        {/* Drop down of pages and */}
+        {/* <ul className="dropdown-menu height">
           {pageandwords.map((pageandpages) => (
             <li
               className="dropdown-item "
@@ -63,7 +65,7 @@ const PagesandWords = () => {
               {`${pageandpages} ${pageandpages > 1? 'Pages':'Page'} / ${pageandpages * state.words}`}
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
       <button
         className="btn btn-secondary fw-bold rounded-0 rounded-end"

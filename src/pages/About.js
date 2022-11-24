@@ -1,6 +1,6 @@
 import React from 'react'
-import ourfounding from '../ourfounding.jpg'
-import teamworkgrowth from '../teamworkpng.png'
+import ourfounding from '../components/images/ourfounding.jpg'
+import teamworkgrowth from '../components/images/teamworkpng.png'
 
 const About = () => {
   return (
