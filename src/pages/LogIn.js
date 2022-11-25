@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap"
 import DispatchContext from "../contexts/DispatchContext";
 
 
-export default function Login() {
+export default function LogIn() {
   // const { state } = useContext(OurContext);
   const dispatch = useContext(DispatchContext);
 

@@ -4,7 +4,7 @@ import { useReducer} from 'react';
 import OurContext from './contexts/OurContext';
 import DispatchContext from './contexts/DispatchContext';
 import { initialState, dispatcher } from './contexts/reducer';
-import LogIn from './pages/Login';
+import LogIn from './pages/LogIn';
 import data from './data'
 import { Routes, Route } from "react-router-dom";
 // import { Link, BrowserRouter, Switch } from "react-router-dom";
@@ -34,7 +34,7 @@ function App() {
           <AuthProvider>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/login" element={<LogIn />} />
+              <Route path="/LogIn" element={<LogIn />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/about" element={<About />} />
