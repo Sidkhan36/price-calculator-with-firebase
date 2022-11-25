@@ -62,6 +62,43 @@ const Home = () => {
                     </div>
                 </section>
 
+                {/* Pricing List */}
+
+                <div className='get-help d-flex flex-column container py-5 px-3 border-bottom"' id='plan'>
+                    <h2>Get Professional help to write academic essay for me</h2>
+                    <p className='justified'>
+                        We offer reasonably priced services for students who need someone to write essays for them. We understand that students are usually tight on money, so we offer academic help that is accessible for everyone, regardless of their social class or economic status. We believe that our experts must be paid fairly, so we offer a discount for those who request our services a few days before the deadline. The same applies to longer orders.
+                    </p>
+                    <h3>Best Paper Prices</h3>
+                    <table className='table table-striped'>
+                        <thead className='thead-dark'>
+                            <tr> <th>Services</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> <td>Academic paper writing   </td>
+                                <td>from $10.80/page</td>
+                            </tr>
+                            <tr> <td>Proofreading</td>
+                                <td>from $3.00/page</td>
+                            </tr>
+                            <tr>
+                                <td>Dissertation services</td>
+                                <td>from $12.00/page</td>
+                            </tr>
+                            <tr>
+                                <td>Rewriting</td>
+                                <td>from $5.00/page</td>
+                            </tr>
+                            <tr>
+                                <td>Editing</td>
+                                <td>from $7.99/page</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 {/* FAQ Section */}
 
                 <section className="container py-5 px-0 border-bottom" id="faq">
@@ -121,41 +158,6 @@ const Home = () => {
                         {/* </div> */}
                     </div>
                 </section>
-
-                <div className='get-help d-flex flex-column container py-5 px-3 border-bottom"' id='plan'>
-                    <h2>Get Professional help to write academic essay for me</h2>
-                    <p className='justified'>
-                        We offer reasonably priced services for students who need someone to write essays for them. We understand that students are usually tight on money, so we offer academic help that is accessible for everyone, regardless of their social class or economic status. We believe that our experts must be paid fairly, so we offer a discount for those who request our services a few days before the deadline. The same applies to longer orders.
-                    </p>
-                    <h3>Best Paper Prices</h3>
-                    <table className='table table-striped'>
-                        <thead className='thead-dark'>
-                            <tr> <th>Services</th>
-                                <th>Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr> <td>Academic paper writing   </td>
-                                <td>from $10.80/page</td>
-                            </tr>
-                            <tr> <td>Proofreading</td>
-                                <td>from $3.00/page</td>
-                            </tr>
-                            <tr>
-                                <td>Dissertation services</td>
-                                <td>from $12.00/page</td>
-                            </tr>
-                            <tr>
-                                <td>Rewriting</td>
-                                <td>from $5.00/page</td>
-                            </tr>
-                            <tr>
-                                <td>Editing</td>
-                                <td>from $7.99/page</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
 
 
                 {/* <!-- Testimonial section--> */}
