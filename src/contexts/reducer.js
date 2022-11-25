@@ -1,7 +1,7 @@
 
 export const initialState = {
-  isLoggedIn:true,
-  tab:{id:'', tabName:'', tabPrice:0},
+  isLoggedIn: true,
+  tab: { id: '', tabName: '', tabPrice: 0 },
   gigWork: { id: '', gigTypeName: '', gigTypePrice: 0 },
   time: { duration: '', durationPrice: 0 },
   almaMater: { level: '', levelPrice: 0 },
@@ -10,7 +10,7 @@ export const initialState = {
   singleSpace: false,
   doubleSpace: true,
   totalPrice: 0,
-  discounts:0,  
+  discounts: 0,
   // totalPrice: this.startingPrice + this.gigWork.gigTypePrice + this.time.durationPrice + this.almaMater.levelPrice
 };
 
@@ -22,73 +22,73 @@ export function dispatcher(state, action) {
         tab: action.value,
         // totalPrice: state.tab.tabPrice
       };
-      case "SELECT":
-        return {
-          ...state,
-          gigWork: action.value,
-          // totalPrice:state.gigWork.gigTypePrice
-        };
-        case "LEVEL":
-          return {
-            ...state,
-            almaMater: action.value,
-          };
-          case "TIME":
-            return {
-              ...state,
-              time: action.value,
-            };
-            case "DOUBLE-SPACE":
-              return {
-                ...state,
-                doubleSpace:action.value,
-                singleSpace:state.singleSpace = false,
-                words:state.words = 275 * state.page
-              };
-              case "SINGLE-SPACE":
-                return {
-                  ...state,
-                  singleSpace:action.value,
-                  doubleSpace:state.doubleSpace = false,
-                  words:state.words = 550 * state.page,
-                  totalPrice:state.totalPrice * state.page
-                };
+    case "SELECT":
+      return {
+        ...state,
+        gigWork: action.value,
+        // totalPrice:state.gigWork.gigTypePrice
+      };
+    case "LEVEL":
+      return {
+        ...state,
+        almaMater: action.value,
+      };
+    case "TIME":
+      return {
+        ...state,
+        time: action.value,
+      };
+    case "DOUBLE-SPACE":
+      return {
+        ...state,
+        doubleSpace: action.value,
+        singleSpace: state.singleSpace = false,
+        words: state.words = 275 * state.page
+      };
+    case "SINGLE-SPACE":
+      return {
+        ...state,
+        singleSpace: action.value,
+        doubleSpace: state.doubleSpace = false,
+        words: state.words = 550 * state.page,
+        totalPrice: state.totalPrice * state.page
+      };
 
-                case "CURRENT-USER":
-                  return {
-                    ...state,
-                    isLoggedIn: action.value
-                  };
-                case "INCREMENT":
-                  return {
-                    ...state,
-                    page: state.page++,
-                    words: state.words  + 275,
-                  };
-                case "SINGLE-SPACE-INCREMENT":
-                  return {
-                    ...state,
-                    page: state.page++,
-                    words: state.words  + 550,
-                    totalPrice:state.totalPrice * state.page
-                  };
-                case "SINGLE-SPACE-DECREMENT":
-                  return {
-                    ...state,
-                    page: state.page--,
-                    words: state.words  - 550,
-                  };
-                  case "DECREMENT":
-                    return {
-                      ...state,
-                      words: state.words - 275,
-                      page: state.page--,
-                    };
+    case "CURRENT-USER":
+      return {
+        ...state,
+        isLoggedIn: action.value
+      };
+    case "INCREMENT":
+      return {
+        ...state,
+        page: state.page++,
+        words: state.words + 275,
+      };
+    case "SINGLE-SPACE-INCREMENT":
+      return {
+        ...state,
+        page: state.page++,
+        words: state.words + 550,
+        totalPrice: state.totalPrice * state.page
+      };
+    case "SINGLE-SPACE-DECREMENT":
+      return {
+        ...state,
+        page: state.page--,
+        words: state.words - 550,
+      };
+    case "DECREMENT":
+      return {
+        ...state,
+        words: state.words - 275,
+        page: state.page--,
+      };
     case "PAGE-WORDS":
       return {
         ...state,
         page: action.value,
-        words:state.words = 275 * action.value
+        words: state.words = 275 * action.value
       };
     case "TOTAL":
       return {
@@ -105,5 +105,6 @@ export function dispatcher(state, action) {
         ...state,
         isLoggedIn: action.value,
       };
+      default: return state;
   }
 }

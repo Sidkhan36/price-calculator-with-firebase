@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import DispatchContext from "../contexts/DispatchContext";
 import OurContext from "../contexts/OurContext";
 const PagesandWords = () => {
   const dispatch = useContext(DispatchContext);
   const { state } = useContext(OurContext);
   // const [page, setPage] = useState (state.page)
-  let pages =state.page
-  let words =state.words
-  const pageandwords = [];
+  // let pages =state.page
+  // let words =state.words
+  // const pageandwords = [];
   // "1 Page / 275 words",
   // "2 Page / 550 words",
   // "3 Page / 825 words",

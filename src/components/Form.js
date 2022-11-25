@@ -64,35 +64,37 @@ const Form = () => {
     }
   }
 
-function dispatchtotal(totalPrice, page) {
-  let totalPrices = totalPrice * page 
+
+useEffect(() => {
   
-  dispatch({ type: "TOTAL", value: totalPrices}); 
-  if(totalPrices >=30 && totalPrices <=40)
-  setDiscount(10)
-else if(totalPrices >=40 && totalPrices <=50)
-  setDiscount(15)
-else if(totalPrices >=50 && totalPrices <=60)
-  setDiscount(20)
-else if(totalPrices >=60 && totalPrices <=70)
+  function dispatchtotal(totalPrice, page) {
+    let totalPrices = totalPrice * page 
+    
+    dispatch({ type: "TOTAL", value: totalPrices}); 
+    if(totalPrices >=30 && totalPrices <=40)
+    setDiscount(10)
+    else if(totalPrices >=40 && totalPrices <=50)
+    setDiscount(15)
+    else if(totalPrices >=50 && totalPrices <=60)
+    setDiscount(20)
+  else if(totalPrices >=60 && totalPrices <=70)
   setDiscount(25)
-else if(totalPrices >=70 && totalPrices <=80)
+  else if(totalPrices >=70 && totalPrices <=80)
   setDiscount(30)
-else if(totalPrices >=80 && totalPrices <=90)
+  else if(totalPrices >=80 && totalPrices <=90)
   setDiscount(35)
-else if(totalPrices >=170)
+  else if(totalPrices >=170)
   setDiscount(40)
   if(totalPrices >= 20){
-    dispatch({type:"TOTAL", value:totalPrices-(totalPrices/100*discount)})
-    dispatch({type:"DISCOUNTED-PRICE", value:totalPrices-(totalPrices-(totalPrices/100*discount))}) 
+      dispatch({type:"TOTAL", value:totalPrices-(totalPrices/100*discount)})
+      dispatch({type:"DISCOUNTED-PRICE", value:totalPrices-(totalPrices-(totalPrices/100*discount))}) 
+    }
+    
   }
   
-}
-useEffect(() => {
   dispatchtotal(totalPrice, page);
-  // let discounts = discounted(totalPrice)
-  // console.log(`this is discount :${discounts}`)
-  }, [totalPrice,page, discount]);
+
+  }, [totalPrice,page,dispatch,discount]);
   // useEffect(() => {
   //   if (state.singleSpace === true || (state.page >= 2 && state.words >= 550))
   //     setDiscount(true);

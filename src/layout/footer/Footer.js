@@ -39,10 +39,10 @@ const Footer = () => {
                   <h4 className="footer-widget-title text-start">Popular Category</h4>
                   <ul>
                     <li>
-                      <a href="#">Wordpress</a>
+                      Wordpress
                     </li>
                     <li>
-                      <a href="#">React Website</a>
+                      React Website
                     </li>
                   </ul>
                 </div>
@@ -58,7 +58,7 @@ const Footer = () => {
                   <h4 className="footer-widget-title text-start">Our Company</h4>
                   <ul>
                     <li>
-                      <a href="#">About Us</a>
+                     About Us
                     </li>
                     <li>
                       <a href="#how-it-works">How It Works</a>
@@ -67,7 +67,7 @@ const Footer = () => {
                       <a href="#testimonials">Testimonials</a>
                     </li>
                     <li>
-                      <a href="#">Contact Us</a>
+                      Contact Us
                     </li>
                     <li>
                       <a href="#plan">Plan &amp; Pricing</a>
@@ -86,19 +86,19 @@ const Footer = () => {
                   <h4 className="footer-widget-title text-start">Help Support</h4>
                   <ul>
                     <li>
-                      <a href="#">Terms &amp; Conditions</a>
+                      Terms &amp; Conditions
                     </li>
                     <li>
                       <a href="#services">Services</a>
                     </li>
                     <li>
-                      <a href="#">Refund Policy</a>
+                     Refund Policy
                     </li>
                     <li>
                       <a href="#faq">FAQs</a>
                     </li>
                     <li>
-                      <a href="https://metaperficient.com/" target="_blank">Blog</a>
+                      <a href="https://metaperficient.com/"  rel="noopener noreferrer" target="_blank">Blog</a>
                     </li>
                   </ul>
                 </div>
@@ -115,9 +115,9 @@ const Footer = () => {
               <div className="copyright-text">
                 <p>
                   © 2022
-                  <a href="#">MetaPer</a>. All rights reserved. Created
+                 MetaPer. All rights reserved. Created
                   by
-                  <a href="https://metaperficient.com/" target="_blank">MetaPerficient</a>
+                  <a href="https://metaperficient.com/"  rel="noopener noreferrer" target="_blank">MetaPerficient</a>
                 </p>
               </div>
 

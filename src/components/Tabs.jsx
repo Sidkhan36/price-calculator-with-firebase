@@ -38,7 +38,7 @@ const Tabs = () => {
             })
           }
           key={tab.id} value={state.tab}
-          className="page-item btn"><a className="btn page-link" name="gigName"> {tab.gigName}</a></li> ))}
+          className="page-item btn"><h5 className="btn page-link" name="gigName"> {tab.gigName}</h5></li> ))}
   </ul>
 </nav>
     </div>
