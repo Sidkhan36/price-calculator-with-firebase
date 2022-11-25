@@ -28,7 +28,6 @@ const CatandTime = () => {
         ))}
   </ul>
 </div>
-    
       <div className="dropdown">
   <button className="btn bg-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
   {state.time.duration === ''? 'Time Period': state.time.duration}

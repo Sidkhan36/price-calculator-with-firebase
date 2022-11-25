@@ -7,11 +7,7 @@ import DispatchContext from "../contexts/DispatchContext";
 
 
 export default function LogIn() {
-  // const { state } = useContext(OurContext);
   const dispatch = useContext(DispatchContext);
-
-
-
   const emailRef = useRef()
   const passwordRef = useRef()
   const { login } = useAuth()
@@ -32,7 +28,7 @@ export default function LogIn() {
       setError("Failed to log in")
     }
 
-    setLoading(false) 
+    setLoading(false)
   }
 
   return (

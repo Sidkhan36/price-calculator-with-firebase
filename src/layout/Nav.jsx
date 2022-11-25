@@ -1,26 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import './nav.css'
-// import OurContext from "../../../contexts/OurContext";
-// import DispatchContext from "../../../contexts/DispatchContext";
-// import { Card, Button, Alert } from "react-bootstrap"
-import { useAuth } from "../../../contexts/AuthContext"
+import '../App.css'
+import { useAuth } from "../contexts/AuthContext"
 import { useNavigate } from "react-router-dom"
-// import { Container } from "react-bootstrap"
-
 
 
 const Nav = () => {
-  // const { state } = useContext(OurContext);
-  // const isLoggedIn = state.isLoggedIn
-  // const dispatch = useContext(DispatchContext);
-  // const currentUser1 = state.current_User;
-
   const [error, setError] = useState("")
   const { currentUser, logout } = useAuth()
-  // console.log(currentUser);
   const history = useNavigate()
-  // console.log(useNavigate)
   async function handleLogout() {
     setError("")
 
@@ -31,7 +19,7 @@ const Nav = () => {
       setError("Failed to log out")
     }
   }
-console.log(error);
+  console.log(error);
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -67,7 +55,7 @@ console.log(error);
               <div className="nav-item dropdown">
                 <div
 
-                  className="nav-link dropdown-toggle"
+                  className="btn nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
                   Services
@@ -76,10 +64,10 @@ console.log(error);
                   <button className="dropdown-item ">
                     Wordpress Website
                   </button>
-                  <button  className="dropdown-item">
+                  <button className="dropdown-item">
                     React Front-End
                   </button>
-                  <button  className="dropdown-item">
+                  <button className="dropdown-item">
                     PSD To Bootstrap/Custom
                   </button>
                   <button className="dropdown-item">

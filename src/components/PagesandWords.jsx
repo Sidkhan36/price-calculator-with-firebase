@@ -72,7 +72,6 @@ const PagesandWords = () => {
         onClick={(e) => {
             e.preventDefault()
           state.singleSpace? dispatch({type: 'SINGLE-SPACE-INCREMENT'}):dispatch({ type: "INCREMENT" })}}
-        // onClick={() => dispatch({ type: "INCREMENT" })}
       >
         +
       </button>

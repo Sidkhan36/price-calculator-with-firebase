@@ -1,6 +1,7 @@
 import React from 'react'
-import Header from './header/Header'
-import Footer from './footer/Footer'
+import Header from './Header'
+// import Footer from './footer/Footer'
+import Footer from './Footer'
 const LayoutWrapper = (props) => {
   return (
     <div className='layout'>

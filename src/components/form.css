@@ -6,9 +6,6 @@
 }
 .form{
     margin: 40px;
-    /* padding: 10px; */
-    /* background-color: gainsboro; */
-    /* height: 450px; */
     width: 330px;
     box-shadow: 0 2.47px 4.99px 0 gainsboro;
 }
@@ -36,9 +33,6 @@ h4{
     scroll-behavior: smooth;
     overflow-y: scroll;
 }
-/* .active:active{
-    background-color: #3a5;
-} */
 .totalanddiscount{
     line-height: 70px;
 }
@@ -70,11 +64,6 @@ h4{
 ::-webkit-scrollbar-track {
     background: #000; 
 }
-/* The track NOT covered by the handle.
-::-webkit-scrollbar-track-piece {
-    background: #000; 
-}
-/* Corner */
 ::-webkit-scrollbar-corner {
     background: #999; 
 }

@@ -1,11 +1,11 @@
 import React from "react";
-import "./footer.css";
+import '../App.css'
 const Footer = () => {
   return (
-    <footer className="footer-area footer--light">
-      <div className="footer-big">
+    <footer className="footer-area footer--light col-xl-12">
+      <div className="footer-big col-md-12">
         {/* <!-- start .container --> */}
-        <div className="container">
+        {/* <div className="p-1"> */}
           <div className="row">
             <div className="col-md-3 col-sm-12">
               <div className="footer-widget">
@@ -16,14 +16,14 @@ const Footer = () => {
                     className="img-fluid"
                   />
                   {/* <p>lorem ipsum</p> */}
-                  <ul className="contact-details">
+                  <ul className="contact-details no-padding">
                     <li>
                       <span className="icon-earphones"></span> Call Us:
-                      <a href="tel:344-755-111">+923353473257</a>
+                      <a href="tel:335-347-325-7" className="small">+923353473257</a>
                     </li>
                     <li>
                       <span className="icon-envelope-open"></span>
-                      <a href="mailto:support@aazztech.com">
+                      <a href="kamikamran660@gmail.com" className="small">
                         kamikamran660@gmail.com
                       </a>
                     </li>
@@ -33,11 +33,11 @@ const Footer = () => {
               {/* <!-- Ends: .footer-widget --> */}
             </div>
             {/* <!-- end /.col-md-4 --> */}
-            <div className="col-md-3 col-sm-4">
+            <div className="col-md-3 col-sm-12">
               <div className="footer-widget">
-                <div className="footer-menu footer-menu--1">
-                  <h4 className="footer-widget-title text-start">Popular Category</h4>
-                  <ul>
+                <div className="footer-menu ">
+                  <h4 className="footer-widget-title ">Popular Category</h4>
+                  <ul className="no-padding">
                     <li>
                       Wordpress
                     </li>
@@ -52,13 +52,13 @@ const Footer = () => {
             </div>
             {/* <!-- end /.col-md-3 --> */}
 
-            <div className="col-md-3 col-sm-4">
+            <div className="col-md-3 col-sm-12">
               <div className="footer-widget">
                 <div className="footer-menu">
-                  <h4 className="footer-widget-title text-start">Our Company</h4>
-                  <ul>
+                  <h4 className="footer-widget-title ">Our Company</h4>
+                  <ul className="no-padding">
                     <li>
-                     About Us
+                      About Us
                     </li>
                     <li>
                       <a href="#how-it-works">How It Works</a>
@@ -80,11 +80,11 @@ const Footer = () => {
             </div>
             {/* <!-- end /.col-lg-3 --> */}
 
-            <div className="col-md-3 col-sm-4">
+            <div className="col-md-3 col-sm-12">
               <div className="footer-widget">
                 <div className="footer-menu no-padding">
-                  <h4 className="footer-widget-title text-start">Help Support</h4>
-                  <ul>
+                  <h4 className="footer-widget-title">Help Support</h4>
+                  <ul className="no-padding">
                     <li>
                       Terms &amp; Conditions
                     </li>
@@ -92,20 +92,20 @@ const Footer = () => {
                       <a href="#services">Services</a>
                     </li>
                     <li>
-                     Refund Policy
+                      Refund Policy
                     </li>
                     <li>
                       <a href="#faq">FAQs</a>
                     </li>
                     <li>
-                      <a href="https://metaperficient.com/"  rel="noopener noreferrer" target="_blank">Blog</a>
+                      <a href="https://metaperficient.com/" rel="noopener noreferrer" target="_blank">Blog</a>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
 
       <div className="mini-footer">
@@ -115,9 +115,9 @@ const Footer = () => {
               <div className="copyright-text">
                 <p>
                   © 2022
-                 MetaPer. All rights reserved. Created
+                  MetaPer. All rights reserved. Created
                   by
-                  <a href="https://metaperficient.com/"  rel="noopener noreferrer" target="_blank">MetaPerficient</a>
+                  <a href="https://metaperficient.com/" rel="noopener noreferrer" target="_blank">MetaPerficient</a>
                 </p>
               </div>
 

@@ -14,21 +14,19 @@ const initialValues = {
   confirm_password: "",
 };
 
-
 export default function Signup() {
 
   // Formik stuff
-  const { values, errors, touched, handleBlur, handleChange} = useFormik({
-      initialValues,
-      validationSchema: signUpSchema,
-      onSubmit: (values, action) => {
-        // console.log("🚀 ~ file: Registration.jsx ~ line 11 ~ Registration ~ values", values );
-        action.resetForm();
-      },
-    });
-    // FormHandleSubmit()
+  const { values, errors, touched, handleBlur, handleChange } = useFormik({
+    initialValues,
+    validationSchema: signUpSchema,
+    onSubmit: (values, action) => {
+      // console.log("🚀 ~ file: Registration.jsx ~ line 11 ~ Registration ~ values", values );
+      action.resetForm();
+    },
+  });
+  // FormHandleSubmit()
   // console.log("🚀 ~ file: Registration.jsx ~ line 25 ~ Registration ~ errors",errors);
-
 
   const form = useRef()
   const emailRef = useRef()
@@ -38,7 +36,7 @@ export default function Signup() {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const history = useNavigate()
-  
+
   async function FormhandleSubmit(e) {
     e.preventDefault()
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -54,7 +52,6 @@ export default function Signup() {
     }
     setLoading(false)
   }
-
   return (
     <>
       <Container
@@ -65,8 +62,6 @@ export default function Signup() {
             <Card.Body>
               <h2 className="text-center mb-4">Sign Up</h2>
               {error && <Alert variant="danger">{error}</Alert>}
-
-
               <Form ref={form} onSubmit={FormhandleSubmit}>
 
                 <Form.Group id="name">
@@ -122,9 +117,6 @@ export default function Signup() {
                   Sign Up
                 </Button>
               </Form>
-
-
-
             </Card.Body>
           </Card>
           <div className="w-100 text-center mt-2">
@@ -132,7 +124,6 @@ export default function Signup() {
           </div>
         </div>
       </Container>
-
     </>
   )
 }

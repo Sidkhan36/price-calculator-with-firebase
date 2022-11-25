@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Pricing = () => {
-  return (
-    <div>
-          <section className="bg-light py-5">
+    return (
+        <div>
+            <section className="bg-light py-5">
                 <div className="container px-5 my-5">
                     <div className="text-center mb-5">
                         <h1 className="fw-bolder">Pay as you grow</h1>
@@ -158,8 +158,8 @@ const Pricing = () => {
                     </div>
                 </div>
             </section>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Pricing

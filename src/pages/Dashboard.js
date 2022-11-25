@@ -8,11 +8,9 @@ import { Container } from "react-bootstrap"
 export default function Dashboard() {
   const [error, setError] = useState("")
   const { currentUser, logout } = useAuth()
-  // console.log(useAuth());
   const history = useNavigate()
   async function handleLogout() {
     setError("")
-
     try {
       await logout()
       history("/login")

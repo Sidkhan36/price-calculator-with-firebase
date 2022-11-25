@@ -11,7 +11,7 @@ const Home = () => {
             <div className='intro-top d-flex justify-content-evenly m-0 text-center '>
                 {/* <div className='intro-inner m-3 p-5 '> */}
                 <div className='text-center d-flex justify-content-evenly flex-column'>
-                    <div>
+                    <div className='px-3 py-5'>
                         <h3>Get your paper written by our professional writer at an affordable price.</h3>
                         <p>Looking for a top-level essay writing service? Look no further than ours! We can take care of all your education-related worries, quickly and efficiently. </p>
                         <div className='d-flex flex-column justify-content-start align-items-center '>
@@ -33,31 +33,31 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='features'>
-                <section className=" py-5 border" id="services">
+            <div className='features '>
+                <section className=" p-5 border" id="services">
                     <div className=""><h2 className="">Our Top-Notch Essay Writing Services Includes</h2></div>
-                    <div className="px-5 my-5 d-flex justify-content-evenly ">
-                        <div className="col mb-5 h-100 p-3">
-                            <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-collection"></i></div>
+                    <div className="px-2 my-2 d-flex justify-content-evenly flex-wrap col-xl-12 col-sm-12 mobile-responsive ">
+                        <div className="col mb-5 h-100 p-3 col-xl-3 col-sm-6">
+                            <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3 "><i className="bi bi-collection"></i></div>
                             <h2 className="h5">Live Chat Support with our Writer</h2>
-                            <p className="mb-0">To discuss all your expectations, ideas, and suggestions, you can chat live with our professional writer. This way, our writers will be able to incorporate your suggestions into their current draft.
+                            <p className="mb-0 justified">To discuss all your expectations, ideas, and suggestions, you can chat live with our professional writer. This way, our writers will be able to incorporate your suggestions into their current draft.
                             </p>
                         </div>
-                        <div className="col mb-5 h-100 p-3" >
+                        <div className="col mb-5 h-100 p-3 col-xl-3 col-sm-6 " >
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-building"></i></div>
                             <h2 className="h5">Originality report at no cost
                             </h2>
-                            <p className="mb-0">At our essay writing service, we understand the importance of originality. That's why we guarantee that all of our papers are 100% unique. You can even request a free originality report to see for yourself. Relax knowing that when you hire us, you're getting the perfect paper for your institution.</p>
+                            <p className="mb-0 justified">At our essay writing service, we understand the importance of originality. That's why we guarantee that all of our papers are 100% unique. You can even request a free originality report to see for yourself. Relax knowing that when you hire us, you're getting the perfect paper for your institution.</p>
                         </div>
                         <div className="col mb-5 mb-md-0 h-100 p-3">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
                             <h2 className="h5">Negotiable Price</h2>
-                            <p className="mb-0">We offer budget-friendly essay help, giving you the freedom to choose your essay writer at a price that suits you. You can choose from a range of prices, from cheaper to more expensive.</p>
+                            <p className="mb-0 justified">We offer budget-friendly essay help, giving you the freedom to choose your essay writer at a price that suits you. You can choose from a range of prices, from cheaper to more expensive.</p>
                         </div>
                         <div className="col h-100 p-3">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
                             <h2 className="h5">Guaranteed Confidentiality</h2>
-                            <p className="mb-0">At ExpressEssayWriter, we understand that anonymity is important to our customers. That's why our site is fully encrypted and all payments are processed through secure payment gateways. Your identity is safe with us.</p>
+                            <p className="mb-0 justified">At ExpressEssayWriter, we understand that anonymity is important to our customers. That's why our site is fully encrypted and all payments are processed through secure payment gateways. Your identity is safe with us.</p>
                         </div>
                     </div>
                 </section>
@@ -67,64 +67,64 @@ const Home = () => {
                 <section className="container py-5 px-0 border-bottom" id="faq">
                     <div className=""><h2 className="">Essay Writing Service <span className='text-primary'>FAQs</span>
                     </h2></div>
-                    <div className="px-5 my-5 d-flex justify-content-between flex-wrap ">
-                        <div className='row'>
+                    <div className="px-5 my-5 d-flex justify-content-between flex-wrap col-xl-12 col-sm-12 mobile-responsive">
+                        {/* <div className='row mobile-responsive'> */}
 
-                            <div className="col mb-5 h-100 ">
-                                <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-collection"></i></div>
-                                <h2 className="h5">Does your paper writing service provide Quality?</h2>
-                                <p className="mb-0">At our essay writing service, we only work with professionals who can demonstrate their knowledge, experience, and ability to deliver great service through interviews, tests, and mock tasks. This ensures that whoever you hire on our essay writing service will be able to craft a paper that meets your specific requirements and is delivered within the timeframe that you set out. In addition, we have a quality control team who ensures that each paper is original and meets our high standards.
-                                </p>
-                            </div>
-                            <div className="col mb-5 h-100">
-                                <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-building"></i></div>
-                                <h2 className="h5">How fast can you deliver the essay after placing an Order?
-
-                                </h2>
-                                <p className="mb-0">No matter when you need assistance with your essay, our team will be there to help. We understand that sometimes you need urgent assistance and we are committed to providing the help you need. To get started, reach out to our customer support team.
-                                </p>
-                            </div>
-                            <div className="col mb-5 mb-md-0 h-100">
-                                <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
-                                <h2 className="h5">In What Formatting Style can you write my Essay?
-                                </h2>
-                                <p className="mb-0">We are aware that formatting is incredibly important to you and your essay instructions. Our professional and skilled writers are capable of adhering to any format, including the most popular ones. This includes MLA, APA, Harvard, Chicago/Turabian formats, among others! All you need to do is inform your expert writer of the style you need and they will deliver as required.
-                                </p>
-                            </div>
+                        <div className="col mb-5 h-100 col-xl-4 col-sm-6 p-3 ">
+                            <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-collection"></i></div>
+                            <h2 className="h5">Does your paper writing service provide Quality?</h2>
+                            <p className="mb-0 justified">At our essay writing service, we only work with professionals who can demonstrate their knowledge, experience, and ability to deliver great service through interviews, tests, and mock tasks. This ensures that whoever you hire on our essay writing service will be able to craft a paper that meets your specific requirements and is delivered within the timeframe that you set out. In addition, we have a quality control team who ensures that each paper is original and meets our high standards.
+                            </p>
                         </div>
-                        <div className='row'>
+                        <div className="col mb-5 h-100 col-xl-4 col-sm-6 p-3">
+                            <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-building"></i></div>
+                            <h2 className="h5">How fast can you deliver the essay after placing an Order?
 
-                            <div className="col h-100">
-                                <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
-                                <h2 className="h5">What is the shortest deadline for your academic essay writing service?
-                                </h2>
-                                <p className="mb-0">We understand that you may need your essay done as soon as possible. In general, we ask for at least six hours to complete most tasks. This is to ensure that we can deliver a high quality product to you. However, our online essay helpers may be able to complete small tasks faster. If you have a tight deadline, please reach out to our customer service team. With the information they have, they will be able to connect you with a writer who is available and can work on last-minute notice.
-                                </p>
-                            </div>
-                            <div className="col h-100">
-                                <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
-                                <h2 className="h5">Does your Essay Writing Service work for School Papers?
-
-                                </h2>
-                                <p className="mb-0">When you hire an essay writer from our essay writing service, you can expect them to adhere to the highest standards of quality, including the criteria set out by your school or college. Our essays are meant to be used for research and study purposes only, and we do not condone any form of plagiarism, from either our experts or our customers.
-
-                                </p>
-                            </div>
-                            <div className="col h-100">
-                                <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
-                                <h2 className="h5">When Do I have to make payment for my Essay Help?
-
-                                </h2>
-                                <p className="mb-0">We want our clients to feel confident and in control when using our online essay writing service. This is why we only finalize payments once the client has confirmed they are satisfied with the work completed. When you place an order and choose the best essay helper, you will be asked to put down a deposit; however, the funds will stay in your account until you receive your paper.
-                                </p>
-                            </div>
+                            </h2>
+                            <p className="mb-0 justified">No matter when you need assistance with your essay, our team will be there to help. We understand that sometimes you need urgent assistance and we are committed to providing the help you need. To get started, reach out to our customer support team.
+                            </p>
                         </div>
+                        <div className="col mb-5 mb-md-0 h-100 col-xl-4 col-sm-6 p-3">
+                            <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
+                            <h2 className="h5">In What Formatting Style can you write my Essay?
+                            </h2>
+                            <p className="mb-0 justified">We are aware that formatting is incredibly important to you and your essay instructions. Our professional and skilled writers are capable of adhering to any format, including the most popular ones. This includes MLA, APA, Harvard, Chicago/Turabian formats, among others! All you need to do is inform your expert writer of the style you need and they will deliver as required.
+                            </p>
+                        </div>
+                        {/* </div> */}
+                        {/* <div className='row mobile-responsive'> */}
+
+                        <div className="col h-100 col-xl-4 col-sm-6 p-3">
+                            <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
+                            <h2 className="h5">What is the shortest deadline for your academic essay writing service?
+                            </h2>
+                            <p className="mb-0 justified">We understand that you may need your essay done as soon as possible. In general, we ask for at least six hours to complete most tasks. This is to ensure that we can deliver a high quality product to you. However, our online essay helpers may be able to complete small tasks faster. If you have a tight deadline, please reach out to our customer service team. With the information they have, they will be able to connect you with a writer who is available and can work on last-minute notice.
+                            </p>
+                        </div>
+                        <div className="col h-100 col-xl-4 col-sm-6 p-3">
+                            <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
+                            <h2 className="h5">Does your Essay Writing Service work for School Papers?
+
+                            </h2>
+                            <p className="mb-0 justified">When you hire an essay writer from our essay writing service, you can expect them to adhere to the highest standards of quality, including the criteria set out by your school or college. Our essays are meant to be used for research and study purposes only, and we do not condone any form of plagiarism, from either our experts or our customers.
+
+                            </p>
+                        </div>
+                        <div className="col h-100 col-xl-4 col-sm-6 p-3">
+                            <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
+                            <h2 className="h5">When Do I have to make payment for my Essay Help?
+
+                            </h2>
+                            <p className="mb-0 justified">We want our clients to feel confident and in control when using our online essay writing service. This is why we only finalize payments once the client has confirmed they are satisfied with the work completed. When you place an order and choose the best essay helper, you will be asked to put down a deposit; however, the funds will stay in your account until you receive your paper.
+                            </p>
+                        </div>
+                        {/* </div> */}
                     </div>
                 </section>
 
-                <div className='get-help d-flex flex-column container py-5 px-0 border-bottom"' id='plan'>
+                <div className='get-help d-flex flex-column container py-5 px-3 border-bottom"' id='plan'>
                     <h2>Get Professional help to write academic essay for me</h2>
-                    <p>
+                    <p className='justified'>
                         We offer reasonably priced services for students who need someone to write essays for them. We understand that students are usually tight on money, so we offer academic help that is accessible for everyone, regardless of their social class or economic status. We believe that our experts must be paid fairly, so we offer a discount for those who request our services a few days before the deadline. The same applies to longer orders.
                     </p>
                     <h3>Best Paper Prices</h3>
@@ -182,92 +182,90 @@ const Home = () => {
                 {/* How our Essay Writing Services works */}
                 <section className=" py-5 border" id="how-it-works">
                     <div className="container"><h2 className="">How our Essay Writing Services works</h2>
-                        <p>You may get a top-notch paper from our academic writing pros in just four simple clicks. The ease of this procedure has been maximized, but if you have any concerns, our helpful support staff is accessible around-the-clock. Simply choose the kind of paper you desire, let us know your specifications, pick a deadline, and make payment for the purchase. The rest will be handled by us.</p>
+                        <p className='justified'>You may get a top-notch paper from our academic writing pros in just four simple clicks. The ease of this procedure has been maximized, but if you have any concerns, our helpful support staff is accessible around-the-clock. Simply choose the kind of paper you desire, let us know your specifications, pick a deadline, and make payment for the purchase. The rest will be handled by us.</p>
                     </div>
-                    <div className="px-5 my-5 d-flex justify-content-evenly ">
-                        <div className="col mb-5 h-100 p-3">
+                    <div className="px-5 my-5 d-flex justify-content-evenly flex-wrap col-xl-12 col-md-12 mobile-responsive ">
+                        <div className="col mb-5 h-100 p-3 col-xl-3 col-sm-6">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-collection"></i></div>
                             <h2 className="h5">Place an Order for writing My Essay</h2>
-                            <p className="mb-0">We make it easy to get started with your assignment. Just complete our simple order form and make sure to include all of the details of your assignment. Our team will take it from there and get started on your project right away.</p>
+                            <p className="mb-0 justified">We make it easy to get started with your assignment. Just complete our simple order form and make sure to include all of the details of your assignment. Our team will take it from there and get started on your project right away.</p>
                         </div>
-                        <div className="col mb-5 h-100 p-3">
+                        <div className="col mb-5 h-100 p-3 col-xl-3 col-sm-6">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-building"></i></div>
                             <h2 className="h5">Our Writer Starts Crafting Your Essay
                             </h2>
-                            <p className="mb-0">As soon as you place your order, our writer will get to work immediately crafting your essay with the utmost professionalism and care so that it is completed before the deadline.</p>
+                            <p className="mb-0 justified">As soon as you place your order, our writer will get to work immediately crafting your essay with the utmost professionalism and care so that it is completed before the deadline.</p>
                         </div>
-                        <div className="col mb-5 mb-md-0 h-100 p-3">
+                        <div className="col mb-5 mb-md-0 h-100 p-3 col-xl-3 col-sm-6">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
                             <h2 className="h5">Track your Order</h2>
-                            <p className="mb-0">You can easily keep track of your order's progress by either checking the progress bar in your personal account page or by communicating directly with the writer assigned to your order. This way, you can be confident that your essay is being worked on and will be delivered to you on time!</p>
+                            <p className="mb-0 justified">You can easily keep track of your order's progress by either checking the progress bar in your personal account page or by communicating directly with the writer assigned to your order. This way, you can be confident that your essay is being worked on and will be delivered to you on time!</p>
                         </div>
-                        <div className="col h-100 p-3">
+                        <div className="col h-100 p-3 col-xl-3 col-sm-6">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
                             <h2 className="h5">Accept Your Order</h2>
-                            <p className="mb-0">Once you approve the draft, we will send you the final version of your paper in an editable format. Please leave a rating for our academic writer's work.</p>
+                            <p className="mb-0 justified">Once you approve the draft, we will send you the final version of your paper in an editable format. Please leave a rating for our academic writer's work.</p>
                         </div>
                     </div>
                 </section>
 
-
-
+                    {/* list of assignment sections */}
                 <section className=" py-5 border" id="list">
-                    <div className="container"
-                    ><h2 className="">We Write Any Type of Assignment/ Paper</h2>
-
-                        <p>At our writing service, you can hire an expert writer to help you with any academic assignment, no matter what the subject matter may be. We offer affordable rates and high-quality work, as you can see from our examples. So, don't hesitate - place your order now! </p>
-                        <div>
-                            <div className='d-flex flex-column justify-content-start align-items-center '>
-                                <ul className='d-flex justify-content-start'>
-                                <li><strong>PaperWork</strong>
-                                        <ul className='list-style-circle'>
-                                            <li>Admission Essay</li>
-                                            <li>Essay</li>
-                                            <li>Annotated Bibliography</li>
-                                            <li>Research Paper</li>
-                                            <li>Term Paper</li>
-                                            <li>Book Reviews</li>
-                                            <li>Proofreading</li>
-                                            <li>Business Plan</li>
-                                            <li>Case Study</li>
-                                            <li>Creative Writing</li>
-                                            <li>Article Review</li>
-                                            <li>Thesis / Dissertation</li>
-                                            <li>Proofreading</li>
-                                            <li>Literature Review</li>
-                                            <li>Other</li>
-                                            <li>Presentation or Speech</li>
-                                            <li>Reflective Writing</li>
-                                            <li>Report</li>
-                                            <li>Critical Thinking</li>
-                                            <li>Movie Review</li>
-                                            <li>Research Proposal</li>
-
-                                        </ul></li>
-
-                                    <li><strong>Assignment</strong>
-                                        <ul className='list-style-circle'>
-                                            <li >Homework Assignment</li>
-                                            <li>Statistics Assignment</li>
-                                            <li>Physics Assignment</li>
-                                            <li>Engineering Assignment</li>
-                                            <li>Biology Assignment</li>
-                                            <li>Geography Assignment</li>
-                                            <li>Physics Assignment</li>
-                                            <li>Chemistry Assignment</li>
-                                        </ul>
-                                    </li>
-                                                                        <li><strong>Other</strong>
-                                        <ul className='list-style-circle'>
-                                            <li>Multiple Choice Questions</li>
-                                            <li>Short Answer Questions</li>
-                                            <li>Word Problems</li>
-
-                                        </ul></li>
-
-                                </ul>
+                    <div className="container p-3">
+                        <h2 className="">We Write Any Type of Assignment/ Paper</h2>
+                        <div className="d-flex align-items-start">
+                            <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <button className="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">PaperWork</button>
+                                <button className="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Assignment</button>
+                                <button className="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Others</button>
                             </div>
+                            <div className="tab-content" id="v-pills-tabContent">
+                                <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                    <ul className='list-style-circle'>
+                                        <li>Admission Essay</li>
+                                        <li>Essay</li>
+                                        <li>Annotated Bibliography</li>
+                                        <li>Research Paper</li>
+                                        <li>Term Paper</li>
+                                        <li>Book Reviews</li>
+                                        <li>Proofreading</li>
+                                        <li>Business Plan</li>
+                                        <li>Case Study</li>
+                                        <li>Creative Writing</li>
+                                        <li>Article Review</li>
+                                        <li>Thesis / Dissertation</li>
+                                        <li>Proofreading</li>
+                                        <li>Literature Review</li>
+                                        <li>Other</li>
+                                        <li>Presentation or Speech</li>
+                                        <li>Reflective Writing</li>
+                                        <li>Report</li>
+                                        <li>Critical Thinking</li>
+                                        <li>Movie Review</li>
+                                        <li>Research Proposal</li>
+                                    </ul>
+                                </div>
+                                <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 
+                                    <ul className='list-style-circle'>
+                                        <li >Homework Assignment</li>
+                                        <li>Statistics Assignment</li>
+                                        <li>Physics Assignment</li>
+                                        <li>Engineering Assignment</li>
+                                        <li>Biology Assignment</li>
+                                        <li>Geography Assignment</li>
+                                        <li>Physics Assignment</li>
+                                        <li>Chemistry Assignment</li>
+                                    </ul>
+                                </div>
+                                <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                    <ul className='list-style-circle'>
+                                        <li>Multiple Choice Questions</li>
+                                        <li>Short Answer Questions</li>
+                                        <li>Word Problems</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
