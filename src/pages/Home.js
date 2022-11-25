@@ -34,27 +34,27 @@ const Home = () => {
             </div>
 
             <div className='features '>
-                <section className=" p-5 border" id="services">
+                <section className=" px-3 py-5 border" id="services">
                     <div className=""><h2 className="">Our Top-Notch Essay Writing Services Includes</h2></div>
-                    <div className="px-2 my-2 d-flex justify-content-evenly flex-wrap col-xl-12 col-sm-12 mobile-responsive ">
-                        <div className="col mb-5 h-100 p-3 col-xl-3 col-sm-6">
+                    <div className=" my-2 d-flex justify-content-evenly flex-wrap col-xl-12 col-sm-12 mobile-responsive ">
+                        <div className="col mb-5 h-100 p-1 col-xl-3 col-sm-6">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3 "><i className="bi bi-collection"></i></div>
                             <h2 className="h5">Live Chat Support with our Writer</h2>
                             <p className="mb-0 justified">To discuss all your expectations, ideas, and suggestions, you can chat live with our professional writer. This way, our writers will be able to incorporate your suggestions into their current draft.
                             </p>
                         </div>
-                        <div className="col mb-5 h-100 p-3 col-xl-3 col-sm-6 " >
+                        <div className="col mb-5 h-100 p-1 col-xl-3 col-sm-6 " >
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-building"></i></div>
                             <h2 className="h5">Originality report at no cost
                             </h2>
                             <p className="mb-0 justified">At our essay writing service, we understand the importance of originality. That's why we guarantee that all of our papers are 100% unique. You can even request a free originality report to see for yourself. Relax knowing that when you hire us, you're getting the perfect paper for your institution.</p>
                         </div>
-                        <div className="col mb-5 mb-md-0 h-100 p-3">
+                        <div className="col mb-5 mb-md-0 h-100 p-1">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
                             <h2 className="h5">Negotiable Price</h2>
                             <p className="mb-0 justified">We offer budget-friendly essay help, giving you the freedom to choose your essay writer at a price that suits you. You can choose from a range of prices, from cheaper to more expensive.</p>
                         </div>
-                        <div className="col h-100 p-3">
+                        <div className="col h-100 p-1">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-toggles2"></i></div>
                             <h2 className="h5">Guaranteed Confidentiality</h2>
                             <p className="mb-0 justified">At ExpressEssayWriter, we understand that anonymity is important to our customers. That's why our site is fully encrypted and all payments are processed through secure payment gateways. Your identity is safe with us.</p>
@@ -101,10 +101,10 @@ const Home = () => {
 
                 {/* FAQ Section */}
 
-                <section className="container py-5 px-0 border-bottom" id="faq">
+                <section className=" px-0 border-bottom" id="faq">
                     <div className=""><h2 className="">Essay Writing Service <span className='text-primary'>FAQs</span>
                     </h2></div>
-                    <div className="px-5 my-5 d-flex justify-content-between flex-wrap col-xl-12 col-sm-12 mobile-responsive">
+                    <div className=" my-5 d-flex justify-content-between flex-wrap col-xl-12 col-sm-12 mobile-responsive">
                         {/* <div className='row mobile-responsive'> */}
 
                         <div className="col mb-5 h-100 col-xl-4 col-sm-6 p-3 ">
@@ -186,7 +186,7 @@ const Home = () => {
                     <div className="container"><h2 className="">How our Essay Writing Services works</h2>
                         <p className='justified'>You may get a top-notch paper from our academic writing pros in just four simple clicks. The ease of this procedure has been maximized, but if you have any concerns, our helpful support staff is accessible around-the-clock. Simply choose the kind of paper you desire, let us know your specifications, pick a deadline, and make payment for the purchase. The rest will be handled by us.</p>
                     </div>
-                    <div className="px-5 my-5 d-flex justify-content-evenly flex-wrap col-xl-12 col-md-12 mobile-responsive ">
+                    <div className=" my-5 d-flex justify-content-evenly flex-wrap col-xl-12 col-md-12 mobile-responsive ">
                         <div className="col mb-5 h-100 p-3 col-xl-3 col-sm-6">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-collection"></i></div>
                             <h2 className="h5">Place an Order for writing My Essay</h2>
