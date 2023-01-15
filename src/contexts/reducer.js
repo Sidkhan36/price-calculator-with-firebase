@@ -60,27 +60,27 @@ export function dispatcher(state, action) {
     case "INCREMENT":
       return {
         ...state,
-        page: state.page++,
+        page: state.page+1,
         words: state.words + 275,
       };
     case "SINGLE-SPACE-INCREMENT":
       return {
         ...state,
-        page: state.page++,
+        page: state.page+1,
         words: state.words + 550,
         totalPrice: state.totalPrice * state.page
       };
     case "SINGLE-SPACE-DECREMENT":
       return {
         ...state,
-        page: state.page--,
+        page: state.page-1,
         words: state.words - 550,
       };
     case "DECREMENT":
       return {
         ...state,
         words: state.words - 275,
-        page: state.page--,
+        page: state.page-1,
       };
     case "PAGE-WORDS":
       return {
